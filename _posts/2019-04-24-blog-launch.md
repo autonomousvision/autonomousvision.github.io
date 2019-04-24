@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Blog Launch"
 date:   2019-04-24 15:00 +0200
 categories: anouncement

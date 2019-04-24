@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Occupancy Networks - Learning 3D Reconstruction in Function Space"
 date:   2019-04-24 15:10 +0200
 categories: research
