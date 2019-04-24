@@ -25,7 +25,7 @@ Another representation that has been investigated in the past are point clouds.
 However, while very flexible and computationally efficient, they lack connectivity information about the output:
 
 <div style="text-align: center">
-<img src="{{ site.baseurl }}/assets/2019-04-24-occupancy-networks/pointcloud.gif" | relative_url }} width="300" />
+<img src="{{ site.baseurl }}/assets/2019-04-24-occupancy-networks/pointcloud.gif" width="300" />
 </div>
 
 Other works have tried to directly output meshes consisting of vertices and faces. Unfortunately, however, this representation either requires a template mesh from the target domain or sacrifices important properties of the 3D output such as connectivity or does not produce watertight meshes. For example, how would you design a neural network that can output both meshes of chairs and cars? In practice, this is extremely hard, often leading to artifacts such as self-intersections or unnatural outputs:
