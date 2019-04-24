@@ -5,6 +5,10 @@ date:   2019-04-24 15:10 +0200
 categories: "paper"
 tags: ["3D reconstruction", "deep learning", "single view 3D reconstruction", "3D representations"]
 author: "Lars Mescheder"
+excerpt: >-
+    In recent years, deep learning has led to many breakthroughs in computer vision. Many tasks such as object detection, semantic segmentation, optical flow estimation and more can now be solved with unprecedented accuracy using deep neural networks.
+header:
+    teaser: "/assets/posts/2019-04-24-occupancy-networks/teaser.png"
 ---
 <div style="text-align: center">
 <img src="{{ site.baseurl }}/assets/posts/2019-04-24-occupancy-networks/teaser.png" width="600" />
