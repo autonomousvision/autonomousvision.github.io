@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 <div style="text-align: center">
-<img src="{{ site.baseurl }}/assets/about/avg_group.jpg" width="600" />
+<img src="{{ site.baseurl }}/assets/images/avg_group.jpg" width="600" />
 </div>
 
 This is the research Blog of the Autonomous Vision Group at the MPI-IS and University of Tübingen 

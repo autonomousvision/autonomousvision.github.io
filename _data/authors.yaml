@@ -1,0 +1,44 @@
+Andreas Geiger:
+    name             : "Andreas Geiger"
+    avatar           :  https://avg.is.tuebingen.mpg.de/uploads/employee/image/53/upper_body_tiny.jpg
+    bio              : ""
+    location         : "Tübingen - Germany"
+    email            : "andreas.geiger@tue.mpg.de"
+    links:
+      - label: "andreas.geiger@tue.mpg.de"
+        icon: "fas fa-fw fa-envelope-square"
+        url: mailto:andreas.geiger@tue.mpg.de
+      - label: "Website"
+        icon: "fas fa-fw fa-link"
+        url: "https://avg.is.tuebingen.mpg.de/person/ageiger"
+      # - label: "Twitter"
+        # icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/"
+      - label: "Facebook"
+        icon: "fab fa-fw fa-facebook-square"
+        url: "https://www.facebook.com/andreas.geiger.395"
+      # - label: "GitHub"
+        # icon: "fab fa-fw fa-github"
+        # url: "https://github.com/"
+      # - label: "Instagram"
+        # icon: "fab fa-fw fa-instagram"
+        # url: "https://instagram.com/"
+
+
+Lars Mescheder:
+  name        : "Lars Mescheder"
+  # bio         : "What do you want, jewels? I am a very extravagant man."
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/618/photosmall.jpg"
+  links:
+    - label: "lars.mescheder@tue.mpg.de"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:lars.mescheder@tue.mpg.de"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/lmescheder"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/lmescheder"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/LMescheder"
