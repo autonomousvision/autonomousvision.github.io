@@ -2,7 +2,8 @@
 layout: single
 title:  "Occupancy Networks - Learning 3D Reconstruction in Function Space"
 date:   2019-04-24 15:10 +0200
-categories: ["3D reconstruction", "deep learning"]
+categories: "paper"
+tags: ["3D reconstruction", "deep learning", "single view 3D reconstruction", "3D representations"]
 author: "Lars Mescheder"
 ---
 <div style="text-align: center">
