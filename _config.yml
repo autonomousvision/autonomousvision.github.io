@@ -16,7 +16,7 @@ minimal_mistakes_skin  : "default" # "default", "air", "aqua", "contrast", "dark
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Autonomous Vision Group"
+title                    : "Autonomous Vision Blog"
 title_separator          : "-"
 name                     : "Andreas Geiger"
 description: >- # this means to ignore newlines until "baseurl:"
