@@ -5,8 +5,8 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/ 
-  - title: "Subscribe"
-    url: /subscribe/ 
+  # - title: "Subscribe"
+  #   url: /subscribe/ 
   - title: "Website"
     url: https://avg.is.tuebingen.mpg.de/
 
