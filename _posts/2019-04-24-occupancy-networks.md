@@ -17,8 +17,7 @@ header:
 In recent years, deep learning has led to many breakthroughs in computer vision. Many tasks such as object detection, semantic segmentation, optical flow estimation and more can now be solved with unprecedented accuracy using deep neural networks.
 
 However, all of these tasks have in common that they can be solved directly in the 2D image domain, allowing us to use powerful 2D-convolutional neural network architectures. But in reality our world is not 2 but 3 dimensional. Reasoning about our world in the 2 dimensional domain is hence only a shortcut which works well for several important tasks in Computer Vision but not all tasks. For example, when we try to apply deep neural networks to 3D reconstruction, we are explicitly interested in a 3 dimensional output and can hence not use the shortcut over a 2 dimensional representation.
-Overview of our method
-But what would be a good output representation for deep neural networks in 3D? In our new paper Occupancy Networks - Learning 3D Reconstruction in Function Space, we examine this question in depth and propose a new output representation, which allows to apply powerful deep architectures also to the 3D domain.
+But what would be a good output representation for deep neural networks in 3D? In our new paper *Occupancy Networks - Learning 3D Reconstruction in Function Space*, we examine this question in depth and propose a new output representation, which allows to apply powerful deep architectures also to the 3D domain.
 
 # The Challenge
 In recent years, many groups have investigated different kinds of 3D output representation for learning-based 3D reconstruction. A very natural representation of 3D geometry are voxels. Voxels are a straighforward generalization of pixels to the 3D domain. While using voxels sounds like a very good idea at first, they have  an important drawback which limits their applicability: while the memory requirements for 2D images grows quadratically with the resolution, the memory requirements of voxels grow cubically with the resolution. For example, when we try to convert a fully convolutional architecture for 2D images which operates at resolution 512 x 512 and which fits onto 1 GPU to  a 3D-convolutional architecture operating on voxels, we would need 512 GPUs to satisfy the memory requirements of our network. In practice, this means that architectures operating on voxels are usually restricted to very low resolution such as 32 or 64:
@@ -40,7 +39,7 @@ Other works have tried to directly output meshes consisting of vertices and face
 <img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/mesh.gif" width="300" />
 </div>
 
-As we have seen, the problem of finding a good 3D output representation for deep learning-based methods is far from solved. We therefore asked ourselves: can we find an output representation for deep neural networks that
+As we have seen, the problem of finding a good 3D output representation for deep learning-based methods is far from solved. We therefore asked ourselves: *can we find an output representation for deep neural networks that*
 
 - can represent meshes of arbitrary topology
 - is not restricted to a Manhattan world
