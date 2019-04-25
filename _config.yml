@@ -129,6 +129,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "Newsletter"
+      icon: "fas fa-fw fa-envelope-square"
+      url: /subscribe
 
 # Reading Files
 include:
