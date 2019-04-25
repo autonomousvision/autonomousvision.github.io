@@ -5,9 +5,6 @@ Andreas Geiger:
     location         : "Tübingen - Germany"
     email            : "andreas.geiger@tue.mpg.de"
     links:
-      - label: "andreas.geiger@tue.mpg.de"
-        icon: "fas fa-fw fa-envelope-square"
-        url: mailto:andreas.geiger@tue.mpg.de
       - label: "Website"
         icon: "fas fa-fw fa-link"
         url: "https://avg.is.tuebingen.mpg.de/person/ageiger"
@@ -27,12 +24,11 @@ Andreas Geiger:
 
 Lars Mescheder:
   name        : "Lars Mescheder"
-  # bio         : "What do you want, jewels? I am a very extravagant man."
   avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/618/photosmall.jpg"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "lars.mescheder@tue.mpg.de"
   links:
-    - label: "lars.mescheder@tue.mpg.de"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:lars.mescheder@tue.mpg.de"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://avg.is.tuebingen.mpg.de/person/lmescheder"
