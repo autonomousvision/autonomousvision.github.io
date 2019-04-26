@@ -73,8 +73,6 @@ During inference, we propose a simple algorithm, called Multiresolution-IsoSurfa
 Yes, it does. In our paper, we conducted extensive experiments on 3D reconstruction from point cloud, single images and voxel grids. We found that occupancy networks allow to represent fine details of 3D geometry, often leading to superior results compared to existing approaches.
 
 # Further Information
-To learn more about occupancy networks, check out our video here:
-
 You can find more information (including the paper PDF) on our [project page](https://avg.is.tuebingen.mpg.de/publications/occupancy-networks). If you are interested in playing with occupancy networks yourself, please checkout the [code](https://github.com/LMescheder/Occupancy-Networks) of our project. If you would like to build on our paper or code, don't forget to cite us:
 
     @inproceedings{Occupancy Networks,
