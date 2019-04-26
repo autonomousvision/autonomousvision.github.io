@@ -1,6 +1,6 @@
 # Autonomous Vision Blog
 
-This is the blog of the blog of the autonomous vision group at MPI-IS Tübingen and University of Tübingen.
+This is the blog of the Autonomous Vision Group at MPI-IS Tübingen and University of Tübingen.
 You can visit our blog at <https://autonomousvision.github.io>.
 Also check out our [website](https://avg.is.tuebingen.mpg.de/) to learn more about our research.
 
