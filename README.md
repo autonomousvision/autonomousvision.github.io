@@ -16,6 +16,24 @@ If you want to include images or other assets, create a subfolder in the [assets
 You can simply reference your assets in your post using `{{ site.url }}/assets/posts/YYYY-MM-DD-YOUR_TITLE/` followed by the filename of the corresponding asset.
 Make sure that you don't forget to include the `{{ site.url }}`! While the post while be rendered correctly without the `{{ site.url }}`, the images in the newsfeed will break if you don't include it.
 
+
+## Offline editing
+When you do offline editing, you probably want to build the website offline for a preview.
+To this end, you first have to [install Ruby and Jekyll](https://jekyllrb.com/docs/installation/).
+Then, you have to install the dependencies (called [Gems](https://rubygems.org/)) for the website:
+```
+bundle
+```
+
+Now, you are ready to build and serve the website using
+```
+bundle exec jekyll serve
+```
+
+This command will build the website and serve it at <http://localhost:4000>.
+When you save changes, the website will be automatically rebuilt in the background.
+Note, however, that changes to `_config.yaml` will not be tracked which means that you have to restart the jekyll server after configuration changes.
+
 ## References
 You can find more information here:
 
