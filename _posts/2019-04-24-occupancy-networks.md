@@ -77,7 +77,7 @@ To learn more about occupancy networks, check out our video here:
 
 {% include video id="w1Qo3bOiPaE" provider="youtube" %}
 
-You can find more information (including the paper PDF) on our [project page](https://avg.is.tuebingen.mpg.de/publications/occupancy-networks). If you are interested in playing with occupancy networks yourself, please checkout the [code](https://github.com/LMescheder/Occupancy-Networks) of our project. If you would like to build on our paper or code, don't forget to cite us:
+You can find more information (including the paper PDF) on our [project page](https://avg.is.tuebingen.mpg.de/publications/occupancy-networks). If you are interested in playing with occupancy networks yourself, please checkout the [code](https://github.com/autonomousvision/occupancy_networks) of our project. If you would like to build on our paper or code, don't forget to cite us:
 
     @inproceedings{Occupancy Networks,
     title = {Occupancy Networks: Learning 3D Reconstruction in Function Space},
