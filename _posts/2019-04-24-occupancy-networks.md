@@ -10,9 +10,8 @@ excerpt: >-
 header:
     teaser: "/assets/posts/2019-04-24-occupancy-networks/teaser.png"
 ---
-<div style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/teaser.png" width="600" />
-</div>
+
+![teaser image]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/teaser.png){: .align-center}
 
 In recent years, deep learning has led to many breakthroughs in computer vision. Many tasks such as object detection, semantic segmentation, optical flow estimation and more can now be solved with unprecedented accuracy using deep neural networks.
 
@@ -22,22 +21,16 @@ But what would be a good output representation for deep neural networks in 3D? I
 # The Challenge
 In recent years, many groups have investigated different kinds of 3D output representation for learning-based 3D reconstruction. A very natural representation of 3D geometry are voxels. Voxels are a straightforward generalization of pixels to the 3D domain. While using voxels sounds like a very good idea at first, they have  an important drawback which limits their applicability: while the memory requirements for 2D images grows quadratically with the resolution, the memory requirements of voxels grow cubically with the resolution. For example, when we try to convert a fully convolutional architecture for 2D images which operates at resolution 512 x 512 and which fits onto 1 GPU to  a 3D-convolutional architecture operating on voxels, we would need 512 GPUs to satisfy the memory requirements of our network. In practice, this means that architectures operating on voxels are usually restricted to very low resolution such as 32<sup>3</sup> or 64<sup>3</sup>:
 
-<div style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/voxels.gif" width="300" />
-</div>
+![voxel representation]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/voxels.gif){: .align-center}
 
 Another representation that has been investigated in the past are point clouds.
 However, while very flexible and computationally efficient, they lack connectivity information about the output:
 
-<div style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/pointcloud.gif" width="300" />
-</div>
+![pointcloud representation]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/pointcloud.gif){: .align-center}
 
 Other works have tried to directly output meshes consisting of vertices and faces. Unfortunately, however, this representation either requires a template mesh from the target domain or sacrifices important properties of the 3D output such as connectivity or does not produce watertight meshes. For example, how would you design a neural network that can output both meshes of chairs and cars? In practice, this is extremely hard, often leading to artifacts such as self-intersections or unnatural outputs:
 
-<div style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/mesh.gif" width="300" />
-</div>
+![mesh representation]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/mesh.gif){: .align-center}
 
 As we have seen, the problem of finding a good 3D output representation for deep learning-based methods is far from solved. We therefore asked ourselves: *can we find an output representation for deep neural networks that*
 
@@ -53,10 +46,7 @@ Even though this whish list sound very ambitious, it turns out that it is indeed
 # Our Approach
 In our paper we propose a simple solution to all the requirements mentioned in the previous section. We wondered: When we use deep neural networks for data processing, why not also use them for representing geometry? Instead of artifically separating data processing of the input and the representation of the output, we propose to represent the 3D geometry itself as the decision boundary of a deep learning classifier:
 
-
-<div style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/onet.gif" width="300" />
-</div>
+![occupancy network]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/onet.gif){: .align-center}
 
 This simple idea solves all of the problems mentioned in the previous section:
 our implicit representation can represent meshes of arbitrary topology and geometry, is not restricted by memory requirements, preserves connectivity information and naturally blends with deep learning techniques.
@@ -65,10 +55,10 @@ During inference, we propose a simple algorithm, called Multiresolution-IsoSurfa
 
 # Does it work?
 
-<div style="text-align: center">
+<p style="text-align: center">
 <img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_input.png" width="300" />
 <img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_output.gif" width="300" />
-</div>
+</p>
 
 Yes, it does. In our paper, we conducted extensive experiments on 3D reconstruction from point cloud, single images and voxel grids. We found that occupancy networks allow to represent fine details of 3D geometry, often leading to superior results compared to existing approaches.
 
