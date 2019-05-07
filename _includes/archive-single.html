@@ -34,8 +34,8 @@
       <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if include.type == "home" and teaser %}
-    <div class="archive__item-teaser">
-      <img src=
+    <div class="teaser-home">
+      <img class="teaser-home-img" src=
       {% if teaser contains "://" %} "{{ teaser }}" {% else %} "{{ teaser | relative_url }}" {% endif %}
       alt="{{ post.title }}">
     </div>

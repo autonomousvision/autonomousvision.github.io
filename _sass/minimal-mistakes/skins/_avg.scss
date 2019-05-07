@@ -1,0 +1,39 @@
+/* ==========================================================================
+   AVG skin
+   ========================================================================== */
+
+
+/* Colors */
+$background-color: #ffffff !default;
+$text-color: #343434 !default;
+$muted-text-color: #505050 !default;
+$primary-color: #343434 !default;
+$border-color: lightsalmon !default;
+$footer-background-color: lightsalmon !default;
+$link-color: #343434 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+
+$masthead-link-color: #343434 !default;
+$masthead-link-color-hover: #343434 !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.masthead {
+    background-color: lightsalmon;
+}
+
+#site-nav {
+    background-color: lightsalmon;
+}
+
+.teaser-home {
+    text-align: center;
+}
+
+.teaser-home-img {
+    max-height:200px;
+    width: auto !important;
+    height: auto !important;
+}
