@@ -9,7 +9,7 @@ $text-color: #343434 !default;
 $muted-text-color: #505050 !default;
 $primary-color: #343434 !default;
 $border-color: lightsalmon !default;
-$footer-background-color: lightsalmon !default;
+$footer-background-color: orange !default;
 $link-color: #343434 !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
@@ -21,11 +21,11 @@ $masthead-link-color-hover: #343434 !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 .masthead {
-    background-color: lightsalmon;
+    background-color: orange;
 }
 
 #site-nav {
-    background-color: lightsalmon;
+    background-color: orange;
 }
 
 .teaser-home {
