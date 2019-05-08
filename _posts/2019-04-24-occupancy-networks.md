@@ -59,7 +59,10 @@ The solution is surprisingly simple: we represent the 3D geometry as the decisio
 
 that takes a 3D point as input and outputs its probability of occupancy. In our experiments, we represent this function using a deep neural network which we call *Occupancy Network*. The decision boundary (at f=0.5) represents the surface of the reconstructed shape:
 
-![occupancy network]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/onet.gif){: .align-center}
+<p style="text-align: center">
+<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/vis2d.svg" width="45%" />
+<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/vis3d.gif" width="45%" />
+</p>
 
 This simple idea solves all of the problems mentioned in the previous section:
 the implicit representation can represent meshes of arbitrary topology and geometry, is not restricted by memory requirements, preserves connectivity information and naturally blends with deep learning techniques.
@@ -73,8 +76,8 @@ For inference, we propose a simple algorithm which efficiently extracts meshes f
 We conducted extensive experiments on 3D reconstruction from point clouds, single images and voxel grids. We found that Occupancy Networks allow to represent fine details of 3D geometry, often leading to superior results compared to existing approaches.
 
 <p style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_input.png" width="300" />
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_output.gif" width="300" />
+<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_input.png" width="45%" />
+<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_output.gif" width="45%" />
 </p>
 
 # Further Information
