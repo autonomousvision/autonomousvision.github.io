@@ -55,9 +55,13 @@ Interestingly, it is indeed possible to find a representation of 3D geometry whi
 
 The solution is surprisingly simple: we represent the 3D geometry as the decision boundary of a classifier that learns to separate the object's inside from its outside. This yields a *continuous* implicit surface representation that can be queried at any point in 3D space and from which watertight meshes can be extracted in a simple post-processing step. More formally, we learn a non-linear function
 
-![occupancy network]({{ site.url }}/assets/posts/2019-04-24-occupancy-networks/formula.png){: .align-center}
 
-that takes a 3D point as input and outputs its probability of occupancy. In our experiments, we represent this function using a deep neural network which we call *Occupancy Network*. The decision boundary (at f=0.5) represents the surface of the reconstructed shape:
+$$
+f_\theta: \mathbb R^3 \to [0, 1]
+$$
+
+
+that takes a 3D point as input and outputs its probability of occupancy. In our experiments, we represent this function using a deep neural network which we call *Occupancy Network*. The decision boundary (at $f_\theta(p)=0.5$) represents the surface of the reconstructed shape:
 
 <p style="text-align: center">
 <img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/vis2d.svg" width="45%" />
