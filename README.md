@@ -16,7 +16,10 @@ If you want to include images or other assets, create a subfolder in the [assets
 You can simply reference your assets in your post using `{{ site.url }}/assets/posts/YYYY-MM-DD-YOUR_TITLE/` followed by the filename of the corresponding asset.
 Make sure that you don't forget to include the `{{ site.url }}`! While the post while be rendered correctly without the `{{ site.url }}`, the images in the newsfeed will break if you don't include it.
 
-
+Please keep the following things in mind when writing your posts:
+- Don't use the public github repository as `origin`. Instead, use our internal (private) repository as `origin`. If you want to publish your post, add the public github repository as an additional remote called `public` (see [below](#publish-your-post) for details).
+- Keep in mind that all your commits to master will appear in the public git history of our public repository. To keep this history clean, it might make sense to edit your post in a separate (private) branch and then merge this branch into `master`.
+ 
 ## Offline editing
 When you do offline editing, you probably want to build the website offline for a preview.
 To this end, you first have to [install Ruby and Jekyll](https://jekyllrb.com/docs/installation/).
@@ -33,6 +36,20 @@ bundle exec jekyll serve
 This command will build the website and serve it at <http://localhost:4000>.
 When you save changes, the website will be automatically rebuilt in the background.
 Note, however, that changes to `_config.yaml` will not be tracked which means that you have to restart the jekyll server after configuration changes.
+
+## Publish your post
+When you want to publish your post, first make sure that you have commited all your changes to the `master` branch and updated our internal git repository.
+
+
+Then add the [public github repository](https://github.com/autonomousvision/autonomousvision.github.io) as a remote:
+```
+git remote add public git@github.com:autonomousvision/autonomousvision.github.io.git
+```
+
+You can now publish your post using
+```
+git push public master
+```
 
 ## References
 You can find more information here:
