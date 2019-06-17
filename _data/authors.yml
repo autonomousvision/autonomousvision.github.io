@@ -38,3 +38,19 @@ Lars Mescheder:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/LMescheder"
+
+
+
+Despoina Paschalidou:
+  name        : "Despoina Paschalidou"
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/670/paschalidoud.jpg"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "despoina.paschalidou@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/dpaschalidou"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/paschalidoud"
