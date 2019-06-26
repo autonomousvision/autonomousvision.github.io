@@ -30,7 +30,11 @@ bundle
 
 Now, you are ready to build and serve the website using
 ```
-bundle exec jekyll serve
+ bundle exec jekyll serve
+```
+Sometimes Jekyll hiccups over character encoding. In this case, try
+```
+ LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 bundle exec jekyll serve
 ```
 
 This command will build the website and serve it at <http://localhost:4000>.

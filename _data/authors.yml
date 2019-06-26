@@ -40,7 +40,6 @@ Lars Mescheder:
       url: "https://github.com/LMescheder"
 
 
-
 Despoina Paschalidou:
   name        : "Despoina Paschalidou"
   avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/670/paschalidoud.jpg"
@@ -54,3 +53,21 @@ Despoina Paschalidou:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/paschalidoud"
+
+
+Simon Donne:
+  name        : "Simon Donne"
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/675/15622370_10154388287129965_2854177071828643222_n.jpg"
+  bio              : ""
+  location         : "Tübingen - German"
+  email            : "simon.donne@tue.mpg.de"
+  links:
+    - label: "MPI Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/sdonne"
+    - label: "Research code"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/simon-donne/"
+    - label: "Personal Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://donnessime.github.io/"
