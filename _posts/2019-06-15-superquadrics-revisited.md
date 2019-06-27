@@ -63,6 +63,11 @@ The diverse shape vocabulary of superquadrics allows us to recover more complica
 
 ![humans]({{ site.url }}/assets/posts/2019-06-15-superquadrics-revisited/humans.gif){: .align-center}
 
+# Further Information
+
+For more shape parsing results, check out this video:
+{% include video id="eaZHYOsv9Lw" provider="youtube" %}
+
 Additional experiments can be found in our [paper](http://www.cvlibs.net/publications/Paschalidou2019CVPR.pdf), our [supplementary](http://www.cvlibs.net/publications/Paschalidou2019CVPR_supplementary.pdf)) and on our [project page](https://avg.is.tuebingen.mpg.de/publications/paschalidou2019cvpr). If you are interested in experimenting with our model you can clone the code for this project from our [github page](https://github.com/paschalidoud/superquadric_parsing).
 
     @inproceedings{Paschalidou2019CVPR,
