@@ -1,0 +1,26 @@
+.teaser-home {
+    text-align: center;
+}
+
+.teaser-home-img {
+    max-height:200px;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 2ex;
+}
+
+.page__content {
+  text-align: justify;
+}
+
+.archive__item-title {
+  margin-bottom: 0;
+
+  & + .page__meta {
+    margin-top: 1ex;
+  }
+}
+
+.archive__item-excerpt {
+  text-align: justify;
+}

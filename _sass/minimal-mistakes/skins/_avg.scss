@@ -27,21 +27,3 @@ $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 #site-nav {
     background-color: $footer-background-color;
 }
-
-.teaser-home {
-    text-align: center;
-}
-
-.teaser-home-img {
-    max-height:200px;
-    width: auto !important;
-    height: auto !important;
-}
-
-.page__content {
-  text-align: justify;
-}
-
-.archive__item-excerpt {
-  text-align: justify;
-}
