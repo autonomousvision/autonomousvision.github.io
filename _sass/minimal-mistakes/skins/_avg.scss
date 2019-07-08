@@ -37,3 +37,11 @@ $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
     width: auto !important;
     height: auto !important;
 }
+
+.page__content {
+  text-align: justify;
+}
+
+.archive__item-excerpt {
+  text-align: justify;
+}

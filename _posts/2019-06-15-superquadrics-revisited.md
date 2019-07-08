@@ -12,12 +12,6 @@ header:
 ---
 ![representations]({{ site.url }}/assets/posts/2019-06-15-superquadrics-revisited/representations.png){: .align-center}
 
-<style type="text/css">
-p {
-    text-align: justify;
-}
-</style>
-
 Recent advances in deep learning coupled with the abundance of large shape repositories gave rise to various methods that seek to learn the 3D model of an object directly from data. Based on the output representation these methods can be categorized into depth-based, voxel-based, point-based and mesh-based techniques. While all of these approaches are able to capture fine details, none of them directly yields a compact, memory-efficient and semantically meaningful representation.
 
 Inspired by the nature of the human's cognitive system, that perceives an object as a decomposition of parts, researchers have proposed to represent objects as a set of atomic elements, which we refer to as primitives.
