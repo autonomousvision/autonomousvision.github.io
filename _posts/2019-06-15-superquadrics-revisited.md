@@ -32,7 +32,7 @@ Superquadrics are a parametric family of surfaces that can be used to describe c
 
 However, early approaches for fitting primitive-based representations to input shapes remained largely unsuccessful due to the difficulty of optimizing the parameters for the input shape and achieving semantic consistency across instances. In our recent work [Superquadrics Revisited: Learning 3D Shape Parsing beyond Cuboids](https://arxiv.org/pdf/1904.09970.pdf), we lift superquadric representations to the deep era and try to answer the question of whether it is possible to train a neural network that recovers the geometry of a 3D object as a set of superquadrics from input images or 3D shapes in an unsupervised manner, namely without supervision in terms of the primitive parameters. As it turns out, unsupervised learning of primitive-based shape abstractions is not only feasible, but, compared to traditional fitting-based approaches, allows for exploiting semantic regularities across instances, leading to stable and semantically consistent predictions.
 
-# Our Approach
+## Our Approach
 
 More formally, our goal is to learn a neural network
 
@@ -53,7 +53,7 @@ $$
 
 For evaluating our loss, we sample points on the surface of each superquadric. This results in a stochastic approximator of the expected loss.
 
-# Does it work?
+## Does it work?
 
 We conducted experiments that demonstrate that our model leads to expressive 3D shape abstractions that capture fine details such as the open mouth of the dog (left-most animal in first row) despite the lack of supervision. We observe that our shape abstractions allow for differentiating between different type of objects such as scooter, chopper, racebike by adjusting the shape of individual object parts. Another surprising property of our model is the semantic consistency of the predicted primitives: the same primitives (highlighted with the same color) consistently represents the same object part.
 
@@ -63,7 +63,7 @@ The diverse shape vocabulary of superquadrics allows us to recover more complica
 
 ![humans]({{ site.url }}/assets/posts/2019-06-15-superquadrics-revisited/humans.gif){: .align-center}
 
-# Further Information
+## Further Information
 
 For more shape parsing results, check out this video:
 {% include video id="eaZHYOsv9Lw" provider="youtube" %}

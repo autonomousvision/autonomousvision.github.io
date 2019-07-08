@@ -20,7 +20,7 @@ However, the physical world we live in is not two- but three-dimensional! Thus, 
 But what constitutes a good 3D representation which is easily accessible to deep neural networks?
 In our recent work [Occupancy Networks - Learning 3D Reconstruction in Function Space](http://www.cvlibs.net/publications/Mescheder2019CVPR.pdf), we examine this question and propose a novel output representation which allows to apply powerful deep architectures to the 3D domain.
 
-# The Challenge
+## The Challenge
 Several 3D output representations have been proposed for learning-based 3D reconstruction.
 Voxels are a straightforward generalization of pixels to the 3D domain. They partition the 3D space into 3D cells according to an equidistant grid. The size of each voxel or grid cell determines the granularity of the representation.
 Unfortunately, voxels come with a severe limitation, in particular in the context of deep learning:
@@ -51,7 +51,7 @@ Given the limitations of existing 3D output representations for deep learning, w
 
 Interestingly, it is indeed possible to find a representation of 3D geometry which satisfies all of these requirements.
 
-# Our Approach
+## Our Approach
 
 The solution is surprisingly simple: we represent the 3D geometry as the decision boundary of a classifier that learns to separate the object's inside from its outside. This yields a *continuous* implicit surface representation that can be queried at any point in 3D space and from which watertight meshes can be extracted in a simple post-processing step. More formally, we learn a non-linear function
 
@@ -75,7 +75,7 @@ This enables it to solve tasks such as 3D reconstruction from a single image.
 We train our model with randomly sampled 3D points for which we know the true class label (inside or outside).
 For inference, we propose a simple algorithm which efficiently extracts meshes from our representation by incrementally constructing an octree.
 
-# Does it work?
+## Does it work?
 
 We conducted extensive experiments on 3D reconstruction from point clouds, single images and voxel grids. We found that Occupancy Networks allow to represent fine details of 3D geometry, often leading to superior results compared to existing approaches.
 
@@ -84,7 +84,7 @@ We conducted extensive experiments on 3D reconstruction from point clouds, singl
 <img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_output.gif" width="45%" />
 </p>
 
-# Further Information
+## Further Information
 To learn more about Occupancy Networks, check out our video here:
 
 {% include video id="w1Qo3bOiPaE" provider="youtube" %}
