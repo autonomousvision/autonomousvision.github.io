@@ -1,3 +1,26 @@
+Axel Sauer:
+    name             : "Axel Sauer"
+    avatar           :  https://axelsauer.com/authors/admin/avatar_hu198a8b92b98d30f15bc76e366262127b_32796_250x250_fill_q90_lanczos_center.jpg
+    bio              : ""
+    location         : "Munich - Germany"
+    email            : "axel.sauer@tum.de"
+    links:
+      - label: "Website"
+        icon: "fas fa-fw fa-link"
+        url: "https://axelsauer.com/"
+      # - label: "Twitter"
+        # icon: "fab fa-fw fa-twitter-square"
+        # url: "https://twitter.com/"
+      #- label: "Facebook"
+      #  icon: "fab fa-fw fa-facebook-square"
+      #  url: "https://www.facebook.com/andreas.geiger.395"
+      # - label: "GitHub"
+        # icon: "fab fa-fw fa-github"
+        # url: "https://github.com/"
+      # - label: "Instagram"
+        # icon: "fab fa-fw fa-instagram"
+        # url: "https://instagram.com/"
+
 Andreas Geiger:
     name             : "Andreas Geiger"
     avatar           :  https://avg.is.tuebingen.mpg.de/uploads/employee/image/53/upper_body_tiny.jpg
