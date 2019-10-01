@@ -1,0 +1,56 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Motivation</strong>: Represent 3D motions with correspondences over time
+
+<div class="column-1">
+    <div class="figure fragment" data-fragment-index=1 style="grid-template-columns: 33% 33% 33%">
+        <!-- First example -->
+        <video class="only-slide" data-autoplay loop src="gfx/oflow/jumping_jacks.mp4" width="90%"></video>
+        <img class="only-print" src="gfx/oflow/jumping_jacks.png" width="90%"></img>
+        <!-- Second example -->
+        <video class="only-slide" data-autoplay loop src="gfx/oflow/leg_jump.mp4" width="90%"></video>
+        <img class="only-print" src="gfx/oflow/leg_jump.png" width="90%"></img>
+        <!-- Third example -->
+        <video class="only-slide" data-autoplay loop src="gfx/oflow/shake_hips.mp4" width="90%"></video>
+        <img class="only-print" src="gfx/oflow/shake_hips.png" width="90%"></img>
+    </div>
+</div>
+
+<footer class="fragment reference" data-fragment-index=1>
+    [Niemeyer et al, ICCV 2019]
+</footer>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+Model Overview:
+
+<div class="column-1">
+<div class="figure">
+    <img src="gfx/oflow/onet.svg" width="90%">
+    <img class="fragment" data-fragment-index=1 src="gfx/oflow/oflow.svg" width="90%">
+    <p>Occupancy Network</p>
+    <p class="fragment" data-fragment-index=1 >Velocity Network</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+Model Overview:
+
+<div class="column-1">
+    <div class="figure">
+        <img src="gfx/oflow/l_corr.svg" width="90%">
+        <img src="gfx/oflow/l_recon.svg" width="90%">
+        <p>Forward flow</p>
+        <p>Backward flow</p>
+    </div>
+</div>

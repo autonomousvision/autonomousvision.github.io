@@ -1,0 +1,133 @@
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>So far</strong>: 3D Reconstruction
+
+<div class="column-1 figure" style="grid-template-columns: 50% 50%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/onet/chair_07.png" width=80% style="object-fit: cover; height: 600px;"></img>
+    <video class="only-slide" data-autoplay loop src="gfx/texnet/empty_onet.mp4" width=80%
+        style="object-fit: cover; height: 600px;"></video>
+    <p>Input</p>
+    <!-- Output -->
+    <img class="only-print" src="gfx/texnet/empty_onet.png" width=80%
+        style="object-fit: cover; height: 600px;"></img>
+    <p>Mesh</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>Missing</strong>: Material + Texture
+
+<div class="column-1 figure" style="grid-template-columns: 50% 50%; height: 800px;">
+    <!-- Input -->
+    <img src="gfx/onet/chair_07.png" width=80% style="object-fit: cover; height: 600px;"></img>
+    <p>Input</p>
+    <!-- Output -->
+    <video class="only-slide" data-autoplay loop src="gfx/texnet/single_onet.mp4" width=80%
+        style="object-fit: cover; height: 600px;"></video>
+    <img class="only-print" src="gfx/texnet/single_onet.png" width=80%
+        style="object-fit: cover; height: 600px;"></img>
+    <p>Mesh + Material</p>
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+<strong>Goal</strong>: Predict textured meshes
+
+<div class="column-1 flex-col" >
+    <img class="fragment" data-fragment-index=1 src="gfx/texnet/teaser.svg" width="80%">
+</div>
+
+<footer class="fragment reference" data-fragment-index=1>
+[Oechsle et al, ICCV 2019]
+</footer>
+
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+Existing Representations:
+
+<div class="column-1 flex-col">
+    <div class="figure" style="grid-template-columns: 33% 33% 33%;">
+        <img class="fragment" data-fragment-index=1 
+            src="gfx/texnet/cat_atlas.png" width="60%">
+        <img class="fragment" data-fragment-index=3
+            src="gfx/texnet/cat_voxels.svg" width="35%">
+        <img class="fragment" data-fragment-index=5
+            src="gfx/texnet/cat_texnet.svg" width="35%">
+        <p class="fragment" data-fragment-index=1>Texture Atlas</p>
+        <p class="fragment" data-fragment-index=3>Colored Voxels</p>
+        <p class="fragment" data-fragment-index=5>Texture Field (ours)</p>
+    </div>
+    <div class="figure" style="grid-template-columns: 33% 33% 33%">
+        <div>
+            <ul class="pro-contra" style="padding-left: 1em">
+                <li class="contra fragment" data-fragment-index=2 style="margin: 0">requires template</li>
+                <li class="contra fragment" data-fragment-index=2 style="margin: 0">discontinuities</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="pro-contra" style="padding-left: 1em">
+                <li class="contra fragment" data-fragment-index=4 style="margin: 0">discretization</li>
+                <li class="contra fragment" data-fragment-index=4 style="margin: 0">memory requirements</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="pro-contra" style="padding-left: 1em">
+                <li class="pro fragment" data-fragment-index=6 style="margin: 0; padding-left: 0em">no template required</li>
+                <li class="pro fragment" data-fragment-index=6 style="margin: 0; padding-left: 0em">no discretization</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+Model Overview (supervised):
+
+<div class="flex-col">
+    <img src="gfx/texnet/model_overview.svg" width="80%">
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+Model Overview (VAE):
+
+<div class="flex-col">
+    <img src="gfx/texnet/model_overview_vae.svg" width="80%">
+</div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Texture Fields
+
+Model Overview (GAN):
+
+<div class="flex-col">
+    <img src="gfx/texnet/model_overview_gan.svg" width="80%">
+</div>

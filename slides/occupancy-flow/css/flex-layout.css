@@ -1,0 +1,258 @@
+.reveal .slides section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.reveal .authorlist {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  align-self: stretch;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  align-self: stretch;
+}
+
+.flex-center {justify-content: center;}
+.flex-start {justify-content: flex-start;}
+.flex-end {justify-content: flex-end;}
+.flex-even {justify-content: space-evenly;}
+.flex-around {justify-content: space-around;}
+.flex-between {justify-content: space-between;}
+
+.align-center {align-self: center;}
+.align-end {align-self: flex-end;}
+.align-start {align-self: flex-start;}
+.align-stretch {align-self: stretch;}
+.align-baseline {align-self: baseline;}
+
+.col-1 {flex: 8.33%; max-width: 8.33%;}
+.col-2 {flex: 16.66%; max-width: 16.66%;}
+.col-3 {flex: 25%; max-width: 25%;}
+.col-4 {flex: 33.33%; max-width: 33.33;}
+.col-5 {flex: 41.66%; max-width: 41.66%;}
+.col-6 {flex: 50%; max-width: 50%;}
+.col-7 {flex: 58.33%; max-width: 58.33;}
+.col-8 {flex: 66.66%; max-width: 66.66%;}
+.col-9 {flex: 75%; max-width: 75%;}
+.col-10 {flex: 83.33%; max-width: 83.33%;}
+.col-11 {flex: 91.66%; max-width: 91.66%;}
+.col-12 {flex: 100%; max-width: 100%;}
+
+.row-1 {flex: 8.33%; max-height: 8.33%;}
+.row-2 {flex: 16.66%; max-height: 16.66%;}
+.row-3 {flex: 25%; max-height: 25%;}
+.row-4 {flex: 33.33%; max-height: 33.33;}
+.row-5 {flex: 41.66%; max-height: 41.66%;}
+.row-6 {flex: 50%; max-height: 50%;}
+.row-7 {flex: 58.33%; max-height: 58.33;}
+.row-8 {flex: 66.66%; max-height: 66.66%;}
+.row-9 {flex: 75%; max-height: 75%;}
+.row-10 {flex: 83.33%; max-height: 83.33%;}
+.row-11 {flex: 91.66%; max-height: 91.66%;}
+.row-12 {flex: 100%; max-height: 100%;}
+
+
+.layout-default {
+  display: grid;
+  grid-template: 
+    "header" auto
+    / 100%;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.layout-1x1 {
+  display: grid;
+  grid:
+    "header" auto
+    "subtitle"
+    "column-1" 1fr
+    "footer" auto
+    / 100%;
+}
+
+.layout-1x2 {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle" auto
+    "column-1 column-2" 1fr
+    "footer footer" auto
+    / 50% 50%;
+}
+
+.layout-1x3 {
+  display: grid;
+  grid:
+    "header header header" auto
+    "subtitle subtitle subtitle"
+    "column-1 column-2 column-3" 1fr
+    "footer footer footer" auto
+    / 100% 100% 100%;
+}
+
+.layout-2x1 {
+  display: grid;
+  grid:
+    "header" auto
+    "subtitle"
+    "column-1" 1fr
+    "column-2" 1fr
+    "footer" auto
+    / 100%;
+}
+
+.layout-2x2 {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle"
+    "column-1 column-2" 1fr
+    "column-3 column-4" 1fr
+    "footer footer" auto
+    / 100% 100%;
+}
+
+.layout-2x3 {
+  display: grid;
+  grid:
+    "header header header" auto
+    "subtitle subtitle subtitle"
+    "column-1 column-2 column-3" 1fr
+    "column-4 column-5 column-6"
+    "footer footer footer" auto
+    / 33% 33% 33%;
+}
+
+
+.layout-U {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle" auto
+    "column-1 column-2" 1fr
+    "column-3 column-3" 1fr
+    "footer footer" auto
+    / 50% 50%;
+}
+
+.layout-revU {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle"
+    "column-1 column-1" 1fr
+    "column-2 column-3" 1fr
+    "footer footer" auto
+    / 50% 50%;
+}
+
+.layout-C {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle"
+    "column-1 column-2" 1fr
+    "column-1 column-3" 1fr
+    "footer footer" auto
+    / 100% 100%;
+}
+
+.layout-revC {
+  display: grid;
+  grid:
+    "header header" auto
+    "subtitle subtitle"
+    "column-1 column-3" 1fr
+    "column-2 column-3" 1fr
+    "footer footer" auto
+    / 100% 100%;
+}
+
+section>header, section>h2, section .header{
+  grid-area: header
+}
+
+section .subtitle {
+  grid-area: subtitle;
+}
+
+section>footer, section .footer{
+  grid-area: footer
+}
+
+section .column-1 {
+  grid-area: column-1
+}
+
+section .column-2 {
+  grid-area: column-2
+}
+
+section .column-3 {
+  grid-area: column-3 
+}
+
+section .column-4 {
+  grid-area: column-4 
+}
+
+section .column-5 {
+  grid-area: column-5
+}
+
+section .column-6 {
+  grid-area: column-6
+}
+
+figure,
+.figure {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-template-rows: [fig-start] 1fr [fig-end caption-start] auto [caption-end];
+  width: 100%;
+  justify-content: space-evenly;
+  align-content: center;
+  grid-gap: 2px / 1px;
+}
+
+.figure>p,
+.figure>.caption,
+.figure>figcaption {
+  grid-row: caption-start / caption-end;
+  align-self: start;
+  justify-self: center;
+  margin: 2px;
+  /* font-size: 0.8em; */
+}
+
+.figure>div,
+.figure>img,
+.figure>video,
+.figure>ul,
+.figure>ol,
+.figure>.subfig {
+  grid-row: fig-start / fig-end;
+  align-self: center;
+  justify-self: center;
+}
+
