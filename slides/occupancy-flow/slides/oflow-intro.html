@@ -2,55 +2,107 @@
 
 ## Occupancy Flow
 
-<strong>Motivation</strong>: Represent 3D motions with correspondences over time
-
-<div class="column-1">
-    <div class="figure fragment" data-fragment-index=1 style="grid-template-columns: 33% 33% 33%">
-        <!-- First example -->
-        <video class="only-slide" data-autoplay loop src="gfx/oflow/jumping_jacks.mp4" width="90%"></video>
-        <img class="only-print" src="gfx/oflow/jumping_jacks.png" width="90%"></img>
-        <!-- Second example -->
-        <video class="only-slide" data-autoplay loop src="gfx/oflow/leg_jump.mp4" width="90%"></video>
-        <img class="only-print" src="gfx/oflow/leg_jump.png" width="90%"></img>
-        <!-- Third example -->
-        <video class="only-slide" data-autoplay loop src="gfx/oflow/shake_hips.mp4" width="90%"></video>
-        <img class="only-print" src="gfx/oflow/shake_hips.png" width="90%"></img>
-    </div>
-</div>
-
-<footer class="fragment reference" data-fragment-index=1>
-    [Niemeyer et al, ICCV 2019]
-</footer>
-
----
-
-<!-- .slide: class="layout-1x1" -->
-
-## Occupancy Flow
-
-Model Overview:
-
-<div class="column-1">
-<div class="figure">
-    <img src="gfx/oflow/onet.svg" width="90%">
-    <img class="fragment" data-fragment-index=1 src="gfx/oflow/oflow.svg" width="90%">
-    <p>Occupancy Network</p>
-    <p class="fragment" data-fragment-index=1 >Velocity Network</p>
-</div>
-
----
-
-<!-- .slide: class="layout-1x1" -->
-
-## Occupancy Flow
-
-Model Overview:
+<strong>Motivation</strong> 
 
 <div class="column-1">
     <div class="figure">
-        <img src="gfx/oflow/l_corr.svg" width="90%">
-        <img src="gfx/oflow/l_recon.svg" width="90%">
-        <p>Forward flow</p>
-        <p>Backward flow</p>
+        <img src="gfx/oflow/motivation/rendering_process.jpg" width="60%">
+    </div>
+    <div class="column-1 flex-col">
+        <ul style="width:80%; align-self: center;">
+            <li class="fragment"> 
+                3D Reconstruction is a highly <strong>ill-posed problem</strong>
+            </li>
+            <li class="fragment">
+                <strong>Learning-based</strong> methods might be a promising solution
+            </li>
+        </ul>
     </div>
 </div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Motivation</strong>: Learning-based 3D Reconstruction
+
+<div class="column-1">
+        <div class="figure">
+            <img src="gfx/oflow/motivation/3D_reconstruction.svg" width="60%">
+        </div>
+        <div class="column-1 flex-col">
+            <ul style="width:80%; align-self: center;">
+                <li class="fragment"> 
+                    Indeed, recent learning-based 3D reconstruction successful
+                </li>
+                <li class="fragment">
+                    They acquire <strong>rich prior knowledge</strong> during training
+                </li>
+                <li class="fragment">
+                    They can infer a 3D object from just a <strong>single-view image</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<!-- <strong>Motivation</strong> -->
+
+<div class="column-1">
+    <div class="figure">
+        <video class="only-slide" data-autoplay loop src="gfx/oflow/motivation/4D_input.mp4" width="512px"></video>
+        <img class="only-print" src="gfx/oflow/motivation/4D_input_img.jpg" width="256px"></img>
+        <p>In the real world, objects are in <strong>motion</strong>.</p>
+    </div>
+</div>
+
+
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<div class="column-1">
+    <div class="row-10 flex-row flex-center align-center" style="font-size: 1.5em">
+            <p>How can we reconstruct <strong >3D shapes in motion</strong>?</p>
+    </div>
+</div>
+
+
+---
+
+<!-- .slide: class="layout-1x1" -->
+
+## Occupancy Flow
+
+<strong>Naive Solution</strong>: Discretize Time
+
+<div class="column-1">
+        <div class="figure">
+            <img src="gfx/oflow/motivation/time_discretized.svg" width="60%">
+        </div>
+        <div class="column-1 flex-col">
+            <ul style="width:80%; align-self: center;">
+                <li class="fragment"> 
+                    Sparsity in time
+                </li>
+                <li class="fragment">
+                    No correspondences
+                </li>
+                <li class="fragment">
+                    Slow inference
+                </li>
+            </ul>
+        </div>
+    </div>
+
+---
