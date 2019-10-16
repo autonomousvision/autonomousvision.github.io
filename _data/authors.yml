@@ -94,3 +94,14 @@ Simon Donne:
     - label: "Personal Website"
       icon: "fas fa-fw fa-link"
       url: "https://donnessime.github.io/"
+
+Michael Niemeyer:
+  name        : "Michael Niemeyer"
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/1226/Michael_Niemeyer.JPG"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "michael.niemeyer@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/mniemeyer"
