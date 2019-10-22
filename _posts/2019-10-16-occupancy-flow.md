@@ -100,7 +100,7 @@ To learn more about Occupancy Flow, check out our video here:
 
 {% include video id="c0yOugTgrWc" provider="youtube" %}
 
-You can find more information (including the [paper](http://www.cvlibs.net/publications/Niemeyer2019ICCV.pdf) and [supplementary](http://www.cvlibs.net/publications/Niemeyer2019ICCV_supplementary.pdf)) on our [project page](https://avg.is.tuebingen.mpg.de/publications/niemeyer2019iccv). If you are interested in experimenting with Occupancy Flow yourself, download the [source code](https://github.com/autonomousvision/occupancy_flow) of our project and run the examples. We are happy to receive your feedback!
+You can find more information (including the [paper](http://www.cvlibs.net/publications/Niemeyer2019ICCV.pdf) and [supplementary](http://www.cvlibs.net/publications/Niemeyer2019ICCV_supplementary.pdf)) on our [project page](https://avg.is.tuebingen.mpg.de/publications/niemeyer2019iccv). We also provide [animated slides](https://autonomousvision.github.io/slides/occupancy-flow/#) for our project. If you are interested in experimenting with Occupancy Flow yourself, download the [source code](https://github.com/autonomousvision/occupancy_flow) of our project and run the examples. We are happy to receive your feedback!
 
     @inproceedings{Niemeyer2019ICCV,
     title = {Occupancy Flow: 4D Reconstruction by Learning Particle Dynamics},
