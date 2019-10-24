@@ -95,6 +95,18 @@ Simon Donne:
       icon: "fas fa-fw fa-link"
       url: "https://donnessime.github.io/"
 
+
+Michael Oechsle:
+  name        : "Michael Oechsle"
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/1080/michael.jpg"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "michael.oechsle@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/moechsle"
+
 Michael Niemeyer:
   name        : "Michael Niemeyer"
   avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/1226/Michael_Niemeyer.JPG"
