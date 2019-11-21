@@ -44,6 +44,23 @@ Andreas Geiger:
         # icon: "fab fa-fw fa-instagram"
         # url: "https://instagram.com/"
 
+Anurag Ranjan:
+  name        : "Anurag Ranjan"
+  avatar      : "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=K-Xbnp8AAAAJ&citpid=2"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "anurag.ranjan@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "http://anuragranj.github.io/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/anuragranj"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/anuragranj"
+
 
 Lars Mescheder:
   name        : "Lars Mescheder"

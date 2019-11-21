@@ -42,7 +42,7 @@ Moreover, especially at low resolution, voxel representations suffer from discre
 An alternative approach, which is especially popular in Computer Graphics, is to map every locations on the mesh to a point in a 2D image.
 This mapping is called a UV-mapping and the resulting representation of texture is called a texture atlas.
 In contrast to colored voxels, a texture atlas is able to represent high frequency details.
-However, this representation depends on the UV-mapping that maps a location on the shape to a pixel in the texture atlas. 
+However, this representation depends on the UV-mapping that maps a location on the shape to a pixel in the texture atlas.
 Unfortunately, there is no unique UV-mapping for arbitrary shapes.
 As a result, methods using texture atlases are currently limited to template models with predefined UV-mappings, that are often hand-crafted.
 
