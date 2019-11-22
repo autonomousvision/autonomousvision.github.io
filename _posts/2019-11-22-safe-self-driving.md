@@ -36,7 +36,8 @@ We synthesize these patches by optimizing over the optical flow networks. We opt
 
 {% include figure image_path="/assets/posts/2019-11-22-safe-self-driving/equation.png"%}
 
-Why does this happen?
+# Why does this happen?
+
 The key to making these systems robust is to look at the inner working of the system. Unfortunately, neural networks have millions of parameters, and it becomes impractical to look at how these parameters decide the response of the system. Therefore, we devised a *Zero-Flow* test. You see, if we supply two identical images, it should mean that there is no motion between them. Therefore, the optical flow system should produce zero motion. Moreover, we could reasonably say that the feature activations should also be zero. However, this is not the case. Even without a targeted attack, the optical flow systems produce some responses to identical images.
 
 {% include figure image_path="/assets/posts/2019-11-22-safe-self-driving/featmaps.png" alt="Feature activations under the Zero-Flow test." caption="Network activations of FlowNetC on identical images with (bottom) and without (top) patch attack. Flow predictions and feature activations (top) are non-zero even without an attack." %}
