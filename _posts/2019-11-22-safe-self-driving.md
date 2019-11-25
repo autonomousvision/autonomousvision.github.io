@@ -55,7 +55,7 @@ However, it might be difficult to design these tests for adversarial attacks on 
 The road to safe-self-driving starts by understanding the vulnerabilities of the present day networks and fixing them for the future. This is the first insight into vulnerabilities of optical flow networks. We have, at least, some understanding of why the optical flow networks are vulnerable. It is time to fix them and move on to other systems which are critical for self-driving.
 
 ## Further Information
-For further information, check out the [project page](http://flowattack.is.tue.mpg.de/) and the video.
+For further information, check out the [project page](http://flowattack.is.tue.mpg.de/) and the [paper](https://arxiv.org/pdf/1910.10053.pdf) on arXiv. You also watch the video here.
 {% include video id="FV-oH1aIdAI" provider="youtube" %}
 
 ### BibTex
