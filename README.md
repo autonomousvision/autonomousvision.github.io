@@ -33,6 +33,9 @@ We have two repositories, a private one for collaboration and a public one for t
     git push public master
     ```
 
+If you don't have access to cvlibs, either ask Andreas to give it to you or simply edit your blog post locally and then directly push it to the public repo (after squashing).
+If you do that, please ask somebody from AVG to update the private repo, too. 
+
 ## Instructions for Authors
 
 To write a new blog entry, first register yourself as an author in [authors.yml](https://github.com/autonomousvision/autonomousvision.github.io/blob/master/_data/authors.yml).
