@@ -4,6 +4,35 @@ This is the blog of the Autonomous Vision Group at MPI-IS Tübingen and Universi
 You can visit our blog at <https://autonomousvision.github.io>.
 Also check out our [website](https://avg.is.tuebingen.mpg.de/) to learn more about our research.
 
+## Overview
+
+We have two repositories, a private one for collaboration and a public one for the blog itself. Creating a blog post follows the usual git workflow:
+
+1. clone private repository: 
+    ```
+    git clone git@cvlibs.net:AVG/avg-blog.git
+    ```
+2. create new branch for your post:
+    ```
+    git branch my-post
+    git checkout my-post
+    ```
+3. work on branch / push my-post branch for collaboration
+4. rebase master on your branch and squash commits (note that all your commits to master will be visible in the public git history):
+    ```
+    git checkout master
+    git rebase -i my-post
+    ```
+5. push master to private repo
+    ```
+    git push origin master
+    ```
+6. publish blog post
+    ```
+    git remote add public git@github.com:autonomousvision/autonomousvision.github.io.git
+    git push public master
+    ```
+
 ## Instructions for Authors
 
 To write a new blog entry, first register yourself as an author in [authors.yml](https://github.com/autonomousvision/autonomousvision.github.io/blob/master/_data/authors.yml).
@@ -40,20 +69,6 @@ Sometimes Jekyll hiccups over character encoding. In this case, try
 This command will build the website and serve it at <http://localhost:4000>.
 When you save changes, the website will be automatically rebuilt in the background.
 Note, however, that changes to `_config.yaml` will not be tracked which means that you have to restart the jekyll server after configuration changes.
-
-## Publish your post
-When you want to publish your post, first make sure that you have commited all your changes to the `master` branch and updated our internal git repository.
-
-
-Then add the [public github repository](https://github.com/autonomousvision/autonomousvision.github.io) as a remote:
-```
-git remote add public git@github.com:autonomousvision/autonomousvision.github.io.git
-```
-
-You can now publish your post using
-```
-git push public master
-```
 
 ## References
 You can find more information here:
