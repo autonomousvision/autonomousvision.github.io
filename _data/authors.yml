@@ -134,3 +134,15 @@ Michael Niemeyer:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://avg.is.tuebingen.mpg.de/person/mniemeyer"
+
+Peidong Liu:
+  name        : "Peidong Liu"
+  avatar      : "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=XZczNEEAAAAJ&citpid=8"
+  bio              : ""
+  location         : "Zurich - Switzerland"
+  email            : "peidong.liu@inf.ethz.ch"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://scholar.google.com/citations?user=XZczNEEAAAAJ&hl=en"Peidong Liu:
+
