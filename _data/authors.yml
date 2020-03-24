@@ -134,6 +134,12 @@ Michael Niemeyer:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://avg.is.tuebingen.mpg.de/person/mniemeyer"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/Mi_Niemeyer"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/m-niemeyer"
 
 Peidong Liu:
   name        : "Peidong Liu"
