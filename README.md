@@ -68,6 +68,12 @@ Sometimes Jekyll hiccups over character encoding. In this case, try
 ```
  LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 bundle exec jekyll serve
 ```
+If you encounter an GemNotFoundException, try to remove
+```
+BUNDLED WITH
+    2.0.1
+```
+from ``Gemfile.lock``.
 
 This command will build the website and serve it at <http://localhost:4000>.
 When you save changes, the website will be automatically rebuilt in the background.
