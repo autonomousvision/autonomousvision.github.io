@@ -60,8 +60,8 @@ We simply evaluate our texture field at this point which gives us our predicted 
 
 ### How do we get the gradients?
 
-As we want to train our network end-to-end, we have to provide gradients for all operations with respect to the network parameters $\theta$.
-While most calculations are easy to handle, the depth prediction step is tricky as we perform many evaluations. This can be very memory-intensive if we need to save all intermediate results. Can we find a more general solution?
+For training a deep model, we need to infer the parameters of the model using gradient-based techniques such as stochastic gradient descent.
+Thus, we have to calculate gradients of the rendered image with respect to the model parameters $\theta$.
 
 We find that we can derive an __analytic expression__ for the gradient of the depth with respect to the network parameters $\theta$.
 We first observe that we can express the point on the surface as $\mathbf{\hat p} = \mathbf{r_0} + \hat{d} \mathbf{w}$ where $\mathbf{r_0}$ is the camera origin, $\mathbf{w}$ the ray to the pixel and $\hat{d}$ the predicted depth.
