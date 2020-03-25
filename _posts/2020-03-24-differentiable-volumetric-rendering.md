@@ -23,7 +23,7 @@ However, our world is not two- but three-dimensional! If we think about self-dri
 In our previous project [Occupancy Networks](http://www.cvlibs.net/publications/Mescheder2019CVPR.pdf) we asked ourselves: "How should we represent 3D geometry in learning-based systems?" It turns out that using implicit functions to represent 3D geometry is promising and has various advantages over previous representations. For example, we do not discretize space and have infinite resolution. 
 
 ## The Challenge
-While this works great for synthetic data, we have a problem if want to scale to __real-world scenarios:__ We currently need 3D supervision! This means that during training, we need pairs of images and corresponding 3D objects. This is fine for synthetic objects, but we do not have this data for real-world images!
+While this works well for synthetic data, we have a problem if we want to scale to __real-world scenarios:__ We currently need 3D supervision! This means that during training, we need pairs of images and corresponding 3D objects. This is fine for synthetic objects, but we do not have this data for real-world images!
 Therefore, in our recent work [Differentiable Volumetric Rendering](http://www.cvlibs.net/publications/Niemeyer2020CVPR.pdf), we investigate how we can __infer implicit 3D representations without 3D supervision__.
 
 But how do we do it?
@@ -48,8 +48,8 @@ which assigns an RGB color value to every point in space. We implement both $f_\
 
 If we want to train our network with 2D-based observations like RGB images or depth maps, we somehow need to __render__ our representation.
 To this end, we first cast a ray from the camera to pixels and evaluate equally-spaced points on this ray.
-Next, We find the interval where points change from outside ($f_\theta(\mathbf{p_j}) < 0.5$) to inside the object ($f_\theta(\mathbf{p_{j+1}}) > 0.5$). Using a root-finding algorithm, e.g. the Secant method, we obtain our final depth prediction.
-This gives us a predicted depth map. And how we get the RGB values?
+Next, we find the interval where points change from being outside ($f_\theta(\mathbf{p_j}) < 0.5$) to inside the object ($f_\theta(\mathbf{p_{j+1}}) > 0.5$). Using a root-finding algorithm, e.g. the Secant method, we obtain our final depth prediction.
+This gives us a predicted depth map. And how do we get the RGB values?
 
 <img src="/assets/posts/2020-03-24-differentiable-volumetric-rendering/forward_pass_rgb.gif" class="align-center" alt="forward pass rgb" width="200px">
 
@@ -59,7 +59,7 @@ We simply evaluate our texture field at this point which gives us our predicted 
 ### How do we get the gradients?
 
 As we want to train our network end-to-end, we have to provide gradients for all operations with respect to the network parameters $\theta$.
-While most calculations are easy to handle, the depth prediction step is tricky as we perform many evaluations. This can be very memory intensive if we need to save all intermediate results. Can we find a more general solution?
+While most calculations are easy to handle, the depth prediction step is tricky as we perform many evaluations. This can be very memory-intensive if we need to save all intermediate results. Can we find a more general solution?
 
 We find that we can derive an __analytic expression__ for the gradient of the depth with respect to the network parameters $\theta$.
 We first observe that we can express the point on the surface as $\mathbf{\hat p} = \mathbf{r_0} + \hat{d} \mathbf{w}$ where $\mathbf{r_0}$ is the camera origin, $\mathbf{w}$ the ray to the pixel and $\hat{d}$ the predicted depth.
@@ -70,7 +70,7 @@ $$
     \frac{\partial \hat{d}}{\partial \theta} = - \left( \frac{\partial f_\theta(\mathbf{\hat p})}{\partial \mathbf{\hat p}} \right)^{-1} \frac{\partial f_\theta(\mathbf{\hat p})}{\partial \theta}
 $$
 
-We have found a way to calculate the gradient for the depth wrt. the network parameters analytically.
+We have found a way to calculate the gradient for the depth with respect to the network parameters analytically.
 This is great as we do not need to approximate the backward pass nor do we need to save intermediate results!
 
 ## Does it work?
@@ -89,7 +89,7 @@ We find that we can infer accurate 3D geometry and texture from a single image a
 </p>
 
 We further observe that we can use our model for real-world multi-view reconstruction.
-We can see that we obtain accurate shape, normal, and texture prediction for this real-world example.
+We obtain accurate shape, normal, and texture prediction for this real-world example.
 
 ## Further Information
 To learn more about Differentiable Volumetric Rendering, check out our video here:
