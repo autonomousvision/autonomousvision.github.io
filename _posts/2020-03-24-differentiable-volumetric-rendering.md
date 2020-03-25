@@ -15,10 +15,10 @@ header:
 
 Deep neural networks have revolutionized computer vision over the last decade. They excel in 2D-based vision tasks such as object detection, optical flow prediction, or semantic segmentation. 
 
-However, our world is not two- but three-dimensional! If we think about self-driving cars as an example, we can see that autonomous agents need to understand our 3D world to safely interact and navigate in it. They need to __reason in 3D__.
-
 ![self-driving car]({{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/wayve.gif){: .align-center}
 <sub><sub>Image Source: Wayve.ai</sub></sub>
+
+However, our world is not two- but three-dimensional! If we think about self-driving cars as an example, we can see that autonomous agents need to understand our 3D world to safely interact and navigate in it. They need to __reason in 3D__.
 
 In our previous project [Occupancy Networks](http://www.cvlibs.net/publications/Mescheder2019CVPR.pdf) we asked ourselves: "How should we represent 3D geometry in learning-based systems?" It turns out that using implicit functions to represent 3D geometry is promising and has various advantages over previous representations. For example, we do not discretize space and have infinite resolution. 
 
@@ -34,37 +34,68 @@ We define two functions, an _occupancy network_
 $$
 f_\theta: \mathbb R^3 \to [0, 1]
 $$
-which assigns an occupancy probably to every point in 3D space.
-The 3D geometry of an object is then defined as the decision boundary of this binary classifier.
+which assigns an occupancy probability to every point in 3D space.
+The 3D geometry of an object is then implicitly given as the decision boundary of this binary classifier.
 We further use a _texture field_
 $$
 \mathbf{t_\theta}: \mathbb R^3 \to \mathbb R^3
 $$
 which assigns an RGB color value to every point in space. We implement both $f_\theta$ and $\mathbf{t_\theta}$ in a _single neural network_ with two shallow heads.
 
-If we want to train our network with 2D-based observations like RGB images or depth maps, we somehow need to __render__ our representation.
-To this end, we cast a ray from the camera to pixels and evaluate equally-spaced points on this ray.
-We find the interval where points change from outside ($f_\theta(\mathbf{p_j}) < 0.5$) to inside the object ($f_\theta(\mathbf{p_{j+1}}) > 0.5$). Using a root-finding algorithm, e.g. the Secant method, we obtain our depth prediction.
+### How do we render it?
 
 ![forward pass]({{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/forward_pass.svg){: .align-center}
 
-And how we get the RGB images?
+If we want to train our network with 2D-based observations like RGB images or depth maps, we somehow need to __render__ our representation.
+To this end, we first cast a ray from the camera to pixels and evaluate equally-spaced points on this ray.
+Next, We find the interval where points change from outside ($f_\theta(\mathbf{p_j}) < 0.5$) to inside the object ($f_\theta(\mathbf{p_{j+1}}) > 0.5$). Using a root-finding algorithm, e.g. the Secant method, we obtain our final depth prediction.
+This gives us a predicted depth map. And how we get the RGB values?
+
+<img src="/assets/posts/2020-03-24-differentiable-volumetric-rendering/forward_pass_rgb.gif" class="align-center" alt="forward pass rgb" width="200px">
+
+Using our predicted depth map, we can now unproject a pixel $\mathbf{u}$ back into 3D space to $\mathbf{\hat p}$.
+We simply evaluate our texture field at this point which gives us our predicted RGB color value $\mathbf{t_\theta}(\mathbf{\hat p})$!
+
+### How do we get the gradients?
+
+As we want to train our network end-to-end, we have to provide gradients for all operations with respect to the network parameters $\theta$.
+While most calculations are easy to handle, the depth prediction step is tricky as we perform many evaluations. This can be very memory intensive if we need to save all intermediate results. Can we find a more general solution?
+
+We find that we can derive an __analytic expression__ for the gradient of the depth with respect to the network parameters $\theta$.
+We first observe that we can express the point on the surface as $\mathbf{\hat p} = \mathbf{r_0} + \hat{d} \mathbf{w}$ where $\mathbf{r_0}$ is the camera origin, $\mathbf{w}$ the ray to the pixel and $\hat{d}$ the predicted depth.
+But we also know that our surface is defined as the decision boundary of our occupancy network! Hence $f_\theta(\mathbf{\hat p}) = 0.5$. 
+When we differentiate both sides for $\theta$ and plug the first formula in the second one, we get
+
+$$
+    \frac{\partial \hat{d}}{\partial \theta} = - \left( \frac{\partial f_\theta(\mathbf{\hat p})}{\partial \mathbf{\hat p}} \right)^{-1} \frac{\partial f_\theta(\mathbf{\hat p})}{\partial \theta}
+$$
+
+We have found a way to calculate the gradient for the depth wrt. the network parameters analytically.
+This is great as we do not need to approximate the backward pass nor do we need to save intermediate results!
 
 ## Does it work?
 
-We conducted extensive experiments on 3D reconstruction from point clouds, single images and voxel grids. We found that Occupancy Networks allow to represent fine details of 3D geometry, often leading to superior results compared to existing approaches.
-
 <p style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_input.png" width="45%" />
-<img src="{{ site.url }}/assets/posts/2019-04-24-occupancy-networks/im2mesh_output.gif" width="45%" />
+<img src="{{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/svr_input.jpg" width="25%" />
+<img src="{{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/svr_output.gif" width="45%" />
 </p>
 
+We find that we can infer accurate 3D geometry and texture from a single image although we only train with 2D or 2.5D supervision!
+
+<p style="text-align: center">
+<img src="{{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/shape.gif" width="32%" />
+<img src="{{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/normals.gif" width="32%" />
+<img src="{{ site.url }}/assets/posts/2020-03-24-differentiable-volumetric-rendering/texture.gif" width="32%" />
+</p>
+
+We further observe that we can use our model for real-world multi-view reconstruction.
+We can see that we obtain accurate shape, normal, and texture prediction for this real-world example.
+
 ## Further Information
-To learn more about Occupancy Networks, check out our video here:
+To learn more about Differentiable Volumetric Rendering, check out our video here:
+{% include video id="gIha5kvSX9s" provider="youtube" %}
 
-{% include video id="w1Qo3bOiPaE" provider="youtube" %}
-
-You can find more information (including the [paper](http://www.cvlibs.net/publications/Mescheder2019CVPR.pdf) and [supplementary](http://www.cvlibs.net/publications/Mescheder2019CVPR_supplementary.pdf)) on our [project page](https://avg.is.tuebingen.mpg.de/publications/occupancy-networks). If you are interested in experimenting with our occupancy networks yourself, download the [source code](https://github.com/autonomousvision/occupancy_networks) of our project and run the examples. We are happy to receive your feedback!
+You can find more information (including the [paper](http://www.cvlibs.net/publications/Niemeyer2020CVPR.pdf) and [supplementary](http://www.cvlibs.net/publications/Niemeyer2020CVPR_supplementary.pdf)) on our [project page](https://avg.is.tuebingen.mpg.de/publications/niemeyer2020cvpr). You can further have a look at our [animated slides](http://tiny.cc/3d-deep-learning) and if you are interested in experimenting with DVR yourself, download the [source code](https://github.com/autonomousvision/differentiable_volumetric_rendering) of our project and run the examples. We are happy to receive your feedback!
 
     @inproceedings{Occupancy Networks,
     title = {Occupancy Networks: Learning 3D Reconstruction in Function Space},
