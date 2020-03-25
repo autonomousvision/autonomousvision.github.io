@@ -1,12 +1,12 @@
 ---
 layout: single
 title:  "Differentiable Volumetric Rendering"
-date:   2020-03-24 15:10 +0200
+date:   2020-03-25 14:00 +0200
 categories: "paper"
 tags: ["3D reconstruction", "deep learning", "single view 3D reconstruction", "3D representations"]
 author: "Michael Niemeyer"
 excerpt: >-
-    Deep neural networks have revolutionized computer vision over the last decade. They excel in tasks that are represented in the 2D domain such as object detection, optical flow prediction, or semantic segmentation. However, our world is not two- but three-dimensional! If we think about autonomous robots, self-driving cars, or autonomous drones, we can see that they need to understand our 3D world to safely interact and navigate in it. Autonomous agents need to reason in 3D.
+    Deep neural networks have revolutionized computer vision over the last decade. They excel in 2D-based vision tasks such as object detection, optical flow prediction, or semantic segmentation. However, our world is not two- but three-dimensional! If we think about self-driving cars as an example, we can see that autonomous agents need to understand our 3D world to safely interact and navigate in it. They need to reason in 3D.
 header:
     teaser: "/assets/posts/2020-03-24-differentiable-volumetric-rendering/teaser.png"
 ---
