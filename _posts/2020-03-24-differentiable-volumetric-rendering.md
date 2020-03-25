@@ -97,7 +97,7 @@ We obtain accurate shape, normal, and texture for this real-world example.
 To learn more about Differentiable Volumetric Rendering, watch our video here:
 {% include video id="gIha5kvSX9s" provider="youtube" %}
 
-You can find more information (including the [paper](http://www.cvlibs.net/publications/Niemeyer2020CVPR.pdf) and [supplementary](http://www.cvlibs.net/publications/Niemeyer2020CVPR_supplementary.pdf)) on our [project page](https://avg.is.tuebingen.mpg.de/publications/niemeyer2020cvpr). You can further have a look at our [animated slides](http://tiny.cc/3d-deep-learning) and if you are interested in experimenting with DVR yourself, download the [source code](https://github.com/autonomousvision/differentiable_volumetric_rendering) of our project and run the examples. We are happy to receive your feedback!
+For more detailed information, check out the [paper](http://www.cvlibs.net/publications/Niemeyer2020CVPR.pdf) and [supplementary](http://www.cvlibs.net/publications/Niemeyer2020CVPR_supplementary.pdf). You can further have a look at our [animated slides](http://tiny.cc/3d-deep-learning) and if you are interested in experimenting with DVR yourself, download the [source code](https://github.com/autonomousvision/differentiable_volumetric_rendering) of our project and run the examples. We are happy to receive your feedback!
 
     @inproceedings{Niemeyer2020CVPR,
         title = {Differentiable Volumetric Rendering: Learning Implicit 3D Representations without 3D Supervision},
