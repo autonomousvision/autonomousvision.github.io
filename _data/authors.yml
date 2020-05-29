@@ -62,6 +62,24 @@ Anurag Ranjan:
       url: "https://github.com/anuragranj"
 
 
+Aditya Prakash:
+  name        : "Aditya Prakash"
+  avatar      : "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=DUgsNccAAAAJ&citpid=1"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "aditya.prakash@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://avg.is.tuebingen.mpg.de/person/aprakash"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/ap229997"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ap229997"
+
+
 Lars Mescheder:
   name        : "Lars Mescheder"
   avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/618/photosmall.jpg"
