@@ -6,7 +6,7 @@ categories: "paper"
 tags: ["self-driving", "autonomous vehicles", "imitation learning", "dagger"]
 author: "Aditya Prakash"
 excerpt: >-
-    We develop a novel algorithm to train self-driving vehicle that are able to perform well across a diverse range of weather conditions in urban environments.
+    We develop a novel algorithm to train self-driving vehicles that are able to drive well across a diverse range of weather conditions in urban environments.
 header:
     teaser: "/assets/posts/2020-05-29-dagger-urban-driving/teaser.png"
 ---
@@ -58,6 +58,6 @@ You can find more information (including the [paper](http://www.cvlibs.net/publi
     @inproceedings{Prakash2020CVPR,
         title = {Exploring Data Aggregation in Policy Learning for Vision-based Urban Autonomous Driving},
         author = {Prakash, Aditya and Behl, Aseem and Ohn-Bar, Eshed and Chitta, Kashyap and Geiger, Andreas},
-        booktitle = { Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+        booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
         year = {2020}
     }
