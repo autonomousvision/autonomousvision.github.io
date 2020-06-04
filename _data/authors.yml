@@ -107,7 +107,10 @@ Despoina Paschalidou:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://avg.is.tuebingen.mpg.de/person/dpaschalidou"
+      url: "https://paschalidoud.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/paschalidoud_1"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/paschalidoud"
