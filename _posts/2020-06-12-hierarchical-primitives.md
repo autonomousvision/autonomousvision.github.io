@@ -1,17 +1,17 @@
 ---
 layout: single
 title:  "Unsupervised Hierarchical Part-based Decomposition"
-date:   2020-06-04 15:10 +0200
+date:   2020-06-12 15:10 +0200
 categories: "paper"
 tags: ["3D reconstruction", "primitive-based representations", "structure-aware representations", "3D representations", "unsupervised learning"]
 author: "Despoina Paschalidou"
 excerpt: >-
     Within the first year of their life, humans develop a common-sense understanding of the physical behavior of the world. This understanding relies heavily on the ability to properly reason about the arrangement of objects in a scene. Early works in cognitive science stipulate
 header:
-    teaser: "/assets/posts/2020-06-04-hierarchical-primitives/teaser.png"
+    teaser: "/assets/posts/2020-06-12-hierarchical-primitives/teaser.png"
 ---
 
-![scene_understanding_1]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/baby_1.gif){: .align-center height="75%"}
+![scene_understanding_1]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/baby_1.gif){: .align-center height="75%"}
 <p style="color:gray; font-family:verdana; font-size:0.7em; tex-align:center">
 Here the infant shows an intuitive understanding of symbolic object
 manipulation, by stacking cups based on their size
@@ -24,7 +24,7 @@ to identify 3D objects in a scene and infer their geometric and physical
 properties, even when these objects are partially visible. We can reason about
 intentions and perform judgments based on our interaction with the world.
 
-![scene_understanding_2]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/infant.gif){: .align-center height="75%"}
+![scene_understanding_2]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/infant.gif){: .align-center height="75%"}
 <p style="color:gray; font-family:verdana; font-size:0.7em; tex-align:center">
 Here the toddler understands the intention of an agent and decides to interact with its environment and help the agent
 (<a href="https://medium.com/syncedreview/mits-josh-tenenbaum-on-intuitive-physics-psychology-in-ai-99690db3480">video source</a>).
@@ -38,7 +38,7 @@ with multiple objects. However, the big question is whether
 reconstruction** such as relationship between objects, interactions, events or
 higher level concepts?
 
-![scene_understanding_2]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/baby_2.gif){: .align-center height="75%"}
+![scene_understanding_2]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/baby_2.gif){: .align-center height="75%"}
 <p style="color:gray; font-family:verdana; font-size:0.7em; tex-align:center">
 Here the baby reaches back for an object that they haven't touched for a while.
 This spatial-object understanding is called Object Permanence and humans seem
@@ -55,7 +55,7 @@ decomposition of parts**. Interestingly, while this seems to be a fairly easy
 task for the human brain, computer vision algorithms struggle to form such a
 high-level reasoning, particularly in the absence of supervision.
 
-![structure]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/rotating_humans.gif){: .align-center height="75%"}
+![structure]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/rotating_humans.gif){: .align-center height="75%"}
 
 The structure of a scene is tightly related to the inherent hierarchical
 organization of its parts. At a coarse level, **a scene can be decomposed into
@@ -70,7 +70,7 @@ parametric function, implemented as a neural network that maps an input image
 to a 3D shape represented as a mesh, a pointcloud, a voxel grid or a set of
 primitives.
 
-![representations]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/representations.png){: .align-center width="80%" height="80%"}
+![representations]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/representations.png){: .align-center width="80%" height="80%"}
 
 However, existing shape representations focus primarily on recovering **the
 local 3D geometry** of an object **without considering its latent hierarchical
@@ -91,7 +91,7 @@ constituent parts** by building a latent space that encodes both the part-level
 hierarchy and the part geometries. The hierarchical decomposition is
 represented as an **unbalanced binary tree of primitives** of depth $$D$$.
 
-![our_representations]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/our_representation_1.png){: .align-center width="90%" height="90%"}
+![our_representations]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/our_representation_1.png){: .align-center width="90%" height="90%"}
 
 **At every depth level**, each of the $2^d \mid d=\{0, \dots, D\}$ nodes is
 recursively split into two nodes (its children) until reaching the
@@ -101,7 +101,7 @@ reconstructions below are derived from the same model, trained with a maximum nu
 of $$2^4 = 16$$ primitives. **During inference, the network dynamically combines
 representations from different depth levels to recover the final prediction.**
 
-![our_representations_2]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/our_representation_2.png){: .align-center}
+![our_representations_2]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/our_representation_2.png){: .align-center}
 
 More importantly, the hierarchical part-based decomposition is learned
 **without any supervision neither on the object parts nor their structure**.
@@ -126,7 +126,7 @@ depth $$D$$ as
 
 $$\mathbf{P}=\{\{p_k^d\}_{k=0}^{2^d-1} \,\mid \, d=\{0\dots D\}\}$$
 
-![input_output]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/input_output_2.png){: .align-center}
+![input_output]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/input_output_2.png){: .align-center}
 
 **At every depth level**, $\mathbf{P}$ reconstructs the target object
 with $$\{1,2,\dots, M\}$$ primitives, where $M$ is an **upper limit to the maximum
@@ -146,7 +146,7 @@ $$g:\mathbb{R}^3 \rightarrow [0, 1]$$, using its distance function $$f(\mathbf{x
 
 $$g(\mathbf{x}; \lambda) = \sigma\left(s\left(1 - f(\mathbf{x}; \lambda)^{\epsilon_1}\right)\right)$$
 
-![implicit_surface]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/implicit_surface.png){: .align-center}
+![implicit_surface]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/implicit_surface.png){: .align-center}
 
 The occupancy function of the assembled shape at depth $$d$$
 $$G^d(\mathbf{x})$$, using $2^d$ primitives, is simply
@@ -167,7 +167,7 @@ primitives at each depth level
 recovers the primitive parameters and the reconstruction quality of each
 primitive.
 
-![network_outline]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/network.png){: .align-center height="75%"}
+![network_outline]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/network.png){: .align-center height="75%"}
 
 Our optimization objective is a weighted sum over four terms:
 * **Structure loss** enforces the hierarchical tree decomposition.
@@ -185,23 +185,23 @@ levels of abstraction, thus leading to more expressive and geometrically
 accurate compared to approaches that only consider the 3D geometry of the
 object parts.
 
-![results_shapenet_1]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/shapenet_qualitative.png){: .align-center height="75%"}
+![results_shapenet_1]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/shapenet_qualitative.png){: .align-center height="75%"}
 
 Our model yields geometrically accurate reconstructions that **outperform
 existing primitive-based methods**, while performing **competitively with more
 flexible implicit shape representations**.
 
-![results_shapenet_2]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/shapenet_quantitative.png){: .align-center height="75%"}
+![results_shapenet_2]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/shapenet_quantitative.png){: .align-center height="75%"}
 
 Below we visualize the predicted tree of primitives on various ShapeNet objects. We observe that our model recovers unbalanced binary trees that decompose a 3D object into a set of parts. We associate every primitive with a unique color, thus **primitives illustrated with the same color correspond to the same object part.**
 
-![results_shapenet_3]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/shapenet.gif){: .align-center height="75%"}
+![results_shapenet_3]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/shapenet.gif){: .align-center height="75%"}
 
 We also validate our model on the Dynamic FAUST
 dataset, which consists of various humans under different poses. We observe
 that our structure-aware representation yields geometrically accurate shape
 abstractions.
-![results_dfaust]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/dfaust_qualitative.png){: .align-center height="75%"}
+![results_dfaust]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/dfaust_qualitative.png){: .align-center height="75%"}
 
 We further observe that our learned hierarchies have a **semantic
 interpretation**, as the same node is consistently used for representing the
@@ -210,7 +210,7 @@ representing the right leg of different humans under various poses (illustrated
 with blue), while node (4, 12) is used for representing the head of different
 humans (illustrated with light green).
 
-![semanticness]({{ site.url }}/assets/posts/2020-06-04-hierarchical-primitives/semantic_interpretation_video.gif){: .align-center height="75%"}
+![semanticness]({{ site.url }}/assets/posts/2020-06-12-hierarchical-primitives/semantic_interpretation_video.gif){: .align-center height="75%"}
 
 ## Further Information
 
@@ -221,7 +221,7 @@ For more details check out our
 [paper](http://www.cvlibs.net/publications/Paschalidou2020CVPR.pdf) and our
 [supplementary](http://www.cvlibs.net/publications/Paschalidou2020CVPR_supplementary.pdf).
 Additional results for various ShapeNet objects as well as D-FAUST humans are
-provided in our [project page](http://superquadrics.com/hieararchical_primitives).
+provided in our [project page](http://superquadrics.com/hierarchical_primitives).
 If you are interested in experimenting with our model you can clone the [source code](https://github.com/paschalidoud/hierarchical_primitives) of our project and train your own models.
 
     @inproceedings{Paschalidou2020CVPR,
