@@ -173,3 +173,17 @@ Peidong Liu:
       icon: "fas fa-fw fa-link"
       url: "https://scholar.google.com.sg/citations?user=XZczNEEAAAAJ&hl=en"
 
+Yiyi Liao:
+  name        : "Yiyi Liao"
+  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/632/Screen_Shot_2016-10-03_at_7.50.00_PM.png"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "yiyi.liao@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://yiyiliao.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/yiyiliao"
+
