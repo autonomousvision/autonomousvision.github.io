@@ -187,3 +187,19 @@ Yiyi Liao:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yiyiliao"
 
+Songyou Peng:
+  name        : "Songyou Peng"
+  avatar      : "https://pengsongyou.github.io/media/profile.jpg"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "songyou.peng@inf.ethz.ch"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://pengsongyou.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pengsongyou"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/songyoupeng"
