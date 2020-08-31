@@ -42,7 +42,7 @@ The feature volume only contains local features from the sparse input points. In
 
 Now, given any point in 3D space, we need to predict if it is occupied. To do so, we can pass the point's 3D point coordinate as well as a feature vector into a fully-connected network to make prediction. Unlike the original ONet that every point uses the same global feature, our method queries a feature for each point from the processed feature volume by trilinear interpolation.
 <p style="text-align: center">
-<img src="{{ site.url }}/assets/posts/2020-08-28-convolutional-occupancy-networks/model_comp.png" width="100%" />
+<img src="{{ site.url }}/assets/posts/2020-08-28-convolutional-occupancy-networks/model_comp.png" width="80%" />
 </p>
 
 This is basically the idea! In addition to the 3D feature volume, we also explore the use of canonical plane(s) to store features. If you are interested, please refer to the paper.
