@@ -203,3 +203,20 @@ Songyou Peng:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/songyoupeng"
+
+Kashyap Chitta:
+  name        : "Kashyap Chitta"
+  avatar      : "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=vX5i2CcAAAAJ&citpid=1"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "kashyap.chitta@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://kashyap7x.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kashyap7x"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/kashyap7x"
