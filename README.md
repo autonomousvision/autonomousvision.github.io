@@ -6,11 +6,11 @@ Also check out our [website](https://avg.is.tuebingen.mpg.de/) to learn more abo
 
 ## Overview
 
-We have two repositories, a private one for collaboration and a public one for the blog itself. Creating a blog post follows the usual git workflow:
+Creating a blog post follows the usual git workflow:
 
-1. clone private repository: 
+1. clone repository: 
     ```
-    git clone git@cvlibs.net:AVG/avg-blog.git
+    git clone https://github.com/autonomousvision/autonomousvision.github.io.git
     ```
 2. create new branch for your post:
     ```
@@ -18,23 +18,25 @@ We have two repositories, a private one for collaboration and a public one for t
     git checkout my-post
     ```
 3. work on branch / push my-post branch for collaboration
-4. rebase master on your branch and squash commits (note that all your commits to master will be visible in the public git history):
+4. rebase master on your branch and squash commits (note that all your commits to master will be visible in the git history):
     ```
     git checkout master
     git rebase -i my-post
     ```
-5. push master to private repo
+5. push master
     ```
     git push origin master
     ```
-6. publish blog post
-    ```
-    git remote add public git@github.com:autonomousvision/autonomousvision.github.io.git
-    git push public master
-    ```
+6. delete your branch
 
-If you don't have access to cvlibs, either ask Andreas to give it to you or simply edit your blog post locally and then directly push it to the public repo (after squashing).
-If you do that, please ask somebody from AVG to update the private repo, too. 
+    locally:
+    ```
+    git branch -d my-post
+    ```
+    and remotely if you pushed your branch in step 3:
+    ```
+    git push origin --delete my-post
+    ```
 
 ## Instructions for Authors
 
@@ -48,9 +50,7 @@ If you want to include images or other assets, create a subfolder in the [assets
 You can simply reference your assets in your post using `{{ site.url }}/assets/posts/YYYY-MM-DD-YOUR_TITLE/` followed by the filename of the corresponding asset.
 Make sure that you don't forget to include the `{{ site.url }}`! While the post while be rendered correctly without the `{{ site.url }}`, the images in the newsfeed will break if you don't include it.
 
-Please keep the following things in mind when writing your posts:
-- Don't use the public github repository as `origin`. Instead, use our internal (private) repository as `origin`. If you want to publish your post, add the public github repository as an additional remote called `public` (see [below](#publish-your-post) for details).
-- Keep in mind that all your commits to master will appear in the public git history of our public repository. To keep this history clean, it might make sense to edit your post in a separate (private) branch and then merge this branch into `master`.
+Please keep in mind that all your commits to master will appear in the git history. To keep this history clean, it might make sense to edit your post in a separate (private) branch and then merge this branch into `master`.
  
 ## Offline editing
 When you do offline editing, you probably want to build the website offline for a preview.
