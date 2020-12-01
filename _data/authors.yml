@@ -220,3 +220,20 @@ Kashyap Chitta:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/kashyap7x"
+
+Katja Schwarz:
+  name             : "Katja Schwarz"
+  avatar           :  "https://www.is.mpg.de/uploads/employee/image/1381/Bewerbungsfoto.png"
+  bio              : ""
+  location         : "Tuebingen - Germany"
+  email            : "katja.schwarz@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://katjaschwarz.github.io/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/K_S_Schwarz"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/katjaschwarz"
