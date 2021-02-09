@@ -2,8 +2,8 @@ Axel Sauer:
     name             : "Axel Sauer"
     avatar           :  https://axelsauer.com/authors/admin/avatar_hu198a8b92b98d30f15bc76e366262127b_32796_250x250_fill_q90_lanczos_center.jpg
     bio              : ""
-    location         : "Munich - Germany"
-    email            : "axel.sauer@tum.de"
+    location         : "Tübingen - Germany"
+    email            : "axel.sauer@tue.mpg.de"
     links:
       - label: "Website"
         icon: "fas fa-fw fa-link"
