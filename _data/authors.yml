@@ -231,3 +231,20 @@ Katja Schwarz:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/katjaschwarz"
+
+Jonathon Luiten:
+  name: "Jonathon Luiten"
+  avatar:  "https://www.vision.rwth-aachen.de/media/person_photos/10985280_10204913916781674_2258061602885404072_n.jpg"
+  bio: ""
+  location: "Aachen - Germany"
+  email: "luiten@vision.rwth-aachen.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.vision.rwth-aachen.de/person/216/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/JonathonLuiten"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/JonathonLuiten"
