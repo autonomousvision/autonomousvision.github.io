@@ -187,7 +187,7 @@ Finally, HOTA also allows the analysis of localization accuracy:
 ![9]({{ site.url }}/assets/posts/2021-03-02-hota-metrics/9.png){: .align-center}
 
 In the first plot above we compare HOTA(0) (HOTA at the single lowest alpha threshold, so to not include the influence 
-of localization accuracy) against the localization accuracy LocA(0) (LocA at the same threshold). We can see that 
+of localization accuracy, in this case at alpha=0.05) against the localization accuracy LocA(0) (LocA at the same threshold). We can see that 
 Tracker 3 performs slightly better than Tracker 1 at HOTA(0), e.g. when allowing detections to match even if they have 
 only a little overlap, Tracker 3 has overall better detection + association, however the localization of these matched 
 detections is worse, such that when we calculate the final HOTA score by calculating over the range of localization 
