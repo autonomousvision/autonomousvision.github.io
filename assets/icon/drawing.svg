@@ -14,11 +14,11 @@
    viewBox="0 0 150 150"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="drawing.svg"
-   inkscape:export-filename="/home/lars/Work/Projects/avg-blog/assets/icon/drawing.svg.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="/home/speng/Documents/autonomousvision.github.io/assets/icon/android-chrome-192x192_new.png"
+   inkscape:export-xdpi="32.512001"
+   inkscape:export-ydpi="32.512001">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,16 +28,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="-797.01527"
-     inkscape:cy="256.92394"
+     inkscape:zoom="1.4"
+     inkscape:cx="342.1415"
+     inkscape:cy="196.46228"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="3200"
-     inkscape:window-height="1689"
-     inkscape:window-x="0"
-     inkscape:window-y="55"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="2560"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -69,7 +69,7 @@
          style="font-size:102.18869781px;fill:#ffffff;fill-opacity:1;stroke-width:0.59876186">A</tspan></text>
     <path
        sodipodi:type="star"
-       style="fill:#ff7f50;fill-opacity:1;stroke:#ffffff;stroke-width:3.80764675;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#a51e50;fill-opacity:1;stroke:#ffffff;stroke-width:3.80764675;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path871"
        sodipodi:sides="3"
        sodipodi:cx="75"
@@ -83,6 +83,8 @@
        inkscape:randomized="0"
        d="m 146.70248,280.82234 -143.4049594,0 L 75,156.63 Z"
        inkscape:transform-center-y="-20.698717"
-       inkscape:transform-center-x="1.7672789e-06" />
+       inkscape:transform-center-x="1.7672789e-06"
+       inkscape:export-xdpi="32.512001"
+       inkscape:export-ydpi="32.512001" />
   </g>
 </svg>
