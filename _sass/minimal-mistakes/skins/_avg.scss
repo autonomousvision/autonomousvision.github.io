@@ -8,16 +8,16 @@ $background-color: #ffffff !default;
 $text-color: #343434 !default;
 $muted-text-color: #505050 !default;
 $primary-color: #343434 !default;
-$border-color: coral !default;
-$footer-background-color: coral !default;
+$border-color: #a51e37 !default;
+$footer-background-color: #a51e37 !default;
 $link-color: #343434 !default;
-$masthead-link-color: $text-color !default;
+$masthead-link-color: $background-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 
-$masthead-link-color: #343434 !default;
-$masthead-link-color-hover: #343434 !default;
+$masthead-link-color: $background-color !default;
+$masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 .masthead {
