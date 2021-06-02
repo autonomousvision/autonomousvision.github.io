@@ -248,3 +248,17 @@ Jonathon Luiten:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/JonathonLuiten"
+
+Fabio Tosi:
+  name        : "Fabio Tosi"
+  avatar      : "https://www.is.mpg.de/uploads/employee/image/1540/fabio.jpg"
+  bio              : ""
+  location         : "Bologna - Italy"
+  email            : "fabio.tosi5@unibo.it"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://vision.disi.unibo.it/~ftosi/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/fabiotosi92"
