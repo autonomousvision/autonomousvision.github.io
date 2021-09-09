@@ -73,6 +73,22 @@ Aditya Prakash:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ap229997"
 
+Christian Reiser:
+  name        : "Christian Reiser"
+  avatar      : "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Z3Ipcf0AAAAJ&citpid=1"
+  bio              : ""
+  location         : "Tübingen - Germany"
+  email            : "christian.reiser@tue.mpg.de"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://creiser.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/ChrisJReiser"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/creiser"
 
 Lars Mescheder:
   name        : "Lars Mescheder"
