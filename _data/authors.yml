@@ -278,3 +278,21 @@ Fabio Tosi:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/fabiotosi92"
+
+
+Xu Chen:
+  name             : "Xu Chen"
+  avatar           :  "https://ait.ethz.ch/people/xu.jpg"
+  bio              : ""
+  location         : "Zurich - Switzerland"
+  email            : "xuchen@inf.ethz.ch"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://ait.ethz.ch/people/xu/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/XuChen71058062"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/xuchen-ethz"
