@@ -146,14 +146,20 @@ Simon Donne:
 
 Michael Oechsle:
   name        : "Michael Oechsle"
-  avatar      : "https://avg.is.tuebingen.mpg.de/uploads/employee/image/1080/michael.jpg"
+  avatar      : "/assets/posts/2021-11-16-unisurf/mo.jpg"
   bio              : ""
   location         : "Tübingen - Germany"
   email            : "michael.oechsle@tue.mpg.de"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://avg.is.tuebingen.mpg.de/person/moechsle"
+      url: "https://moechsle.github.io"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/mjoech"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/moechsle"
 
 Michael Niemeyer:
   name        : "Michael Niemeyer"
