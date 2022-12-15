@@ -181,7 +181,7 @@
         <h2 class="title is-3" style="margin-top: -30px">About</h2>
         <div class="content has-text-justified">
           <p>
-            SDF-Studio is a unified and modularized framework for neural implicit surface reconstruction, built on top of the awesome nerfstudio project. We provide unified implementation of three major implicit surface reconstruction methods: UniSurf, VolSDF, and NeuS. SDF-Studio also supports various scene representions, such as MLPs, Tri-plane, and Multi-res. feature grids, and multiple points sampling strategy such as surface-guided sampling as in UniSurf, and Voxel-surface guided sampling from NeuralReconW. It further integrated recent advances in the area such as monocular prior in MonoSDF and multi-view consistency in Geo-NeuS. Thanks to the unified and modularized implementation, we could apply idea from one method to the other methods easily. For example, Mono-NeuS applies the idea from MonoSDF to NeuS, and Geo-VolSDF applies the idea from Geo-NeuS to VolSDF.
+            SDFStudio is a unified and modularized framework for neural implicit surface reconstruction, built on top of the awesome nerfstudio project. We provide unified implementation of three major implicit surface reconstruction methods: UniSurf, VolSDF, and NeuS. SDFStudio also supports various scene representions, such as MLPs, Tri-plane, and Multi-res. feature grids, and multiple points sampling strategy such as surface-guided sampling as in UniSurf, and Voxel-surface guided sampling from NeuralReconW. It further integrated recent advances in the area such as monocular prior in MonoSDF and multi-view consistency in Geo-NeuS. Thanks to the unified and modularized implementation, we could apply idea from one method to the other methods easily. For example, Mono-NeuS applies the idea from MonoSDF to NeuS, and Geo-VolSDF applies the idea from Geo-NeuS to VolSDF.
           </p>
         </div>
       </div>
@@ -201,7 +201,7 @@
         <h3 class="title is-4">NeuS-facto</h3>
         <div class="content has-text-justified">
           <p>
-             We use a proposal network for sampling (inspired by nerfacto and mipnerf360), a big MLPs (8 layers with 512 hidden dimension) for scene represention, and train the model with 8 A100 gpus for ~10 hours on the Heritage dataset.
+            We use a proposal network for sampling (inspired by nerfacto and mip-NeRF 360), a big MLP (8 layers with 512 hidden dimension) as scene representations, and train the model on 8 A100 GPUs for ~10 hours on the Heritage dataset.
           </p>
         </div>
         
@@ -222,7 +222,7 @@
         <h3 class="title is-4">UniSurf, VolSDF, and NeuS</h3>
         <div class="content has-text-justified">
           <p>
-            Reconstruction results of UniSurf, VolSDF, NeuS with multi-res feature grids in the DTU dataset.
+            Reconstruction results of UniSurf, VolSDF, NeuS with Multi-Res Feature Grids in the DTU dataset.
           </p>
         </div>
         
@@ -266,7 +266,7 @@
         <h3 class="title is-4">Geo-UniSurf, Geo-VolSDF, and Geo-NeuS</h3>
         <div class="content has-text-justified">
           <p>
-            Thanks to our unified framework, we could apply the idea from Geo-NeuS easily to all other methods, UniSurf, VolSDF and NeuS:
+            Thanks to our unified framework, we can apply the idea from Geo-NeuS to the methods UniSurf, VolSDF and NeuS.
           </p>
         </div>
         
@@ -330,7 +330,7 @@
         <h3 class="title is-4">Mono-NeuS</h3>
         <div class="content has-text-justified">
           <p>
-            We could also apply the idea from MonoSDF to NeuS easily, as shown here of the Tanks and Temples dataset Auditorium scene:
+            We can also apply the idea of MonoSDF to NeuS, as shown here for the Tanks and Temples dataset Auditorium scene:
           </p>
         </div>
         
@@ -406,7 +406,7 @@
         <h2 class="title is-3" style="margin-top: -30px">Viewer</h2>
         <div class="content has-text-justified">
           <p>
-             Nerfstudio's viewer could be used for interactive visualization.
+            Nerfstudio's viewer can be used for interactive visualization.
           </p>
         </div>
         <div class="content has-text-centered" style="overflow: hidden;">
