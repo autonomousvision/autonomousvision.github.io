@@ -181,7 +181,7 @@
         <h2 class="title is-3" style="margin-top: -30px">About</h2>
         <div class="content has-text-justified">
           <p>
-            SDFStudio is a unified and modularized framework for neural implicit surface reconstruction, built on top of the awesome nerfstudio project. We provide unified implementation of three major implicit surface reconstruction methods: UniSurf, VolSDF, and NeuS. SDFStudio also supports various scene representions, such as MLPs, Tri-plane, and Multi-res. feature grids, and multiple points sampling strategy such as surface-guided sampling as in UniSurf, and Voxel-surface guided sampling from NeuralReconW. It further integrated recent advances in the area such as monocular prior in MonoSDF and multi-view consistency in Geo-NeuS. Thanks to the unified and modularized implementation, we could apply idea from one method to the other methods easily. For example, Mono-NeuS applies the idea from MonoSDF to NeuS, and Geo-VolSDF applies the idea from Geo-NeuS to VolSDF.
+            SDFStudio is a unified and modular framework for neural implicit surface reconstruction, built on top of the awesome nerfstudio project. We provide a unified implementation of three major implicit surface reconstruction methods: UniSurf, VolSDF, and NeuS. SDFStudio also supports various scene representions, such as MLPs, Tri-plane, and Multi-res. feature grids, and multiple point sampling strategies such as surface-guided sampling as in UniSurf, and Voxel-surface guided sampling from NeuralReconW. It further integrates recent advances in the area such as the utillization of monocular cues (MonoSDF), geometry regularization (UniSurf) and multi-view consistency (Geo-NeuS). Thanks to the unified and modular implementation, SDFStudio makes it easy to transfer ideas from one method to another. For example, Mono-NeuS applies the idea from MonoSDF to NeuS, and Geo-VolSDF applies the idea from Geo-NeuS to VolSDF.
           </p>
         </div>
       </div>
@@ -195,13 +195,13 @@
     <!-- Results. -->
     <div class="columns is-centered ">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Reconstruction Results Gallery</h2>
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Reconstruction Results</h2>
 
 
         <h3 class="title is-4">NeuS-facto</h3>
         <div class="content has-text-justified">
           <p>
-            We use a proposal network for sampling (inspired by nerfacto and mip-NeRF 360), a big MLP (8 layers with 512 hidden dimension) as scene representations, and train the model on 8 A100 GPUs for ~10 hours on the Heritage dataset.
+            In this example, we use a proposal network for sampling (inspired by nerfacto and mip-NeRF 360), a big MLP (8 layers with 512 hidden dimension) as scene representations, and train the model on 8 A100 GPUs for ~10 hours on the Heritage dataset.
           </p>
         </div>
         
@@ -222,7 +222,7 @@
         <h3 class="title is-4">UniSurf, VolSDF, and NeuS</h3>
         <div class="content has-text-justified">
           <p>
-            Reconstruction results of UniSurf, VolSDF, NeuS with Multi-Res Feature Grids in the DTU dataset.
+            Reconstruction results of UniSurf, VolSDF and NeuS using a Multi-Res. Feature Grid representation on the DTU datasets.
           </p>
         </div>
         
@@ -266,7 +266,7 @@
         <h3 class="title is-4">Geo-UniSurf, Geo-VolSDF, and Geo-NeuS</h3>
         <div class="content has-text-justified">
           <p>
-            Thanks to our unified framework, we can apply the idea from Geo-NeuS to the methods UniSurf, VolSDF and NeuS.
+            Geo-NeuS improves reconstruction quality by enforcing multi-view photometric consistency during optimization. Thanks to our unified framework, we can apply the idea from Geo-NeuS to UniSurf and VolSDF.
           </p>
         </div>
         
@@ -351,7 +351,7 @@
         <h3 class="title is-4">NeuS-Acc</h3>
         <div class="content has-text-justified">
           <p>
-            NeuS with empty space skipping based on nerfacc with monocular prior from monosdf, trained for ~17 minutes.
+            NeuS with empty space skipping based on nerfacc with monocular prior from MonoSDF, trained for ~17 minutes.
           </p>
         </div>
         
@@ -406,7 +406,7 @@
         <h2 class="title is-3" style="margin-top: -30px">Viewer</h2>
         <div class="content has-text-justified">
           <p>
-            Nerfstudio's viewer can be used for interactive visualization.
+            Nerfstudio's viewer can be used for interactive visualization of rendered RGB images, depth and normals.
           </p>
         </div>
         <div class="content has-text-centered" style="overflow: hidden;">
@@ -431,12 +431,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@misc{Yu2022SDFStudio,
-      author    = {Zehao Yu, Anpei Chen, Bozidar Antic, Songyou Peng, Apratim Bhattacharyya,
-                   Michael Niemeyer, Siyu Tang Torsten Sattler and Andreas Geiger},
-      title     = {SDFStudio: A Unified Framework for Surface Reconstruction},
-      year      = {2022},
-      url       = {https://github.com/autonomousvision/sdfstudio},
-    }</code></pre>
+    author    = {Zehao Yu, Anpei Chen, Bozidar Antic, Songyou Peng, Apratim Bhattacharyya,
+                 Michael Niemeyer, Siyu Tang Torsten Sattler and Andreas Geiger},
+    title     = {SDFStudio: A Unified Framework for Surface Reconstruction},
+    year      = {2022},
+    url       = {https://github.com/autonomousvision/sdfstudio},
+}</code></pre>
   </div>
 </section>
 
